@@ -61,6 +61,9 @@ call plug#begin("~/.local/share/nvim/site/plugged")
 call plug#end()
 
 " THEME
+" options & requirements for ayu
 set termguicolors
 let ayucolor="dark"
+
+" settings the theme
 colorscheme ayu

@@ -23,6 +23,7 @@ PROMPT="%B%K{cyan} %n %k %K{208} in %k %K{yellow} %~ %k ⌘%b "
 
 ## --VI MODE-- ##
 bindkey -v
+export KEYTIMEOUT=1
 
 ## --AUTOCOMPLETE-- ##                      (copy pasted from Luke Smith's zshrc)
 autoload -U compinit
