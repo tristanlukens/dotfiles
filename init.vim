@@ -56,7 +56,11 @@ call plug#begin("~/.local/share/nvim/site/plugged")
     Plug 'gruvbox-community/gruvbox'
     " emmet
     Plug 'mattn/emmet-vim'
+    " ayu theme
+    Plug 'ayu-theme/ayu-vim'    
 call plug#end()
 
 " THEME
-colorscheme gruvbox
+set termguicolors
+let ayucolor="dark"
+colorscheme ayu
