@@ -7,7 +7,9 @@
 
 " vim/nvim config by Tristan Lukens
 " tristanlukens.com
-" I hope the site above is going to be a thing soon :) 
+" I hope the site above is going to be a thing soon :)
+
+" very based of of ThePrimeagen's vimrc. https://www.youtube.com/watch?v=n9k9scbTuvQ&t=365s
 
 " numbers
 set relativenumber
