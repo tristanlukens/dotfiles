@@ -19,7 +19,7 @@ alias szconf="source $HOME/.zshrc"
 alias vconf="v $HOME/.config/nvim/init.vim"
 
 ## --PROMPT-- ##
-PROMPT="%B%K{cyan} %n %k %K{208} in %k %K{yellow} %~ %k ⌘%b "
+PROMPT="%B%K{cyan} %n %k %K{208} in %k %K{yellow}%F{black} %~ %k%f ⌘%b "
 
 ## --VI MODE-- ##
 bindkey -v
