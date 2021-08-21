@@ -38,7 +38,7 @@ set history=1000
 
 set wildmenu
 
-" PLUGINS
+" PLUGINS (this is not working now)
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
