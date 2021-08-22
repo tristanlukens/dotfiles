@@ -11,6 +11,25 @@
 
 " very based of of ThePrimeagen's vimrc. https://www.youtube.com/watch?v=n9k9scbTuvQ&t=365s
 
+call plug#begin("~/.local/share/nvim/site/plugged")
+    " Better Syntax Support
+    Plug 'sheerun/vim-polyglot'
+    " File Explorer
+    Plug 'scrooloose/NERDTree'
+    " Auto pairs for '(' '[' '{'
+    Plug 'jiangmiao/auto-pairs'
+    " gruvbox theme
+    Plug 'gruvbox-community/gruvbox'
+    " ayu theme
+    Plug 'ayu-theme/ayu-vim'
+    "coc
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+
+" sourcing coc.vim
+" with commented out statusline, isn't working
+source $HOME/.config/nvim/plug-config/coc.vim
+
 " numbers
 set relativenumber
 set nu
@@ -45,20 +64,6 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin("~/.local/share/nvim/site/plugged")
-    " Better Syntax Support
-    Plug 'sheerun/vim-polyglot'
-    " File Explorer
-    Plug 'scrooloose/NERDTree'
-    " Auto pairs for '(' '[' '{'
-    Plug 'jiangmiao/auto-pairs'
-    " gruvbox theme
-    Plug 'gruvbox-community/gruvbox'
-    " emmet
-    Plug 'mattn/emmet-vim'
-    " ayu theme
-    Plug 'ayu-theme/ayu-vim'    
-call plug#end()
 
 " THEME
 " options & requirements for ayu
@@ -66,4 +71,16 @@ set termguicolors
 let ayucolor="dark"
 
 " settings the theme
-colorscheme ayu
+colorscheme gruvbox
+
+" statusline
+set statusline=
+set statusline=%#PmenuSel#
+set statusline+=\ %y
+set statusline+=\ %r
+set statusline+=\ %F
+set statusline+=%=
+set statusline+=%#Search#
+set statusline+=\ [%l
+set statusline+=\ of
+set statusline+=\ %L]
