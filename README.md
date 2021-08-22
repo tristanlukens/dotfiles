@@ -8,7 +8,7 @@
 
 - vim/neovim config
 - zshrc
-
+- gitconfig
 
 
 :octocat:
