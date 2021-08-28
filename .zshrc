@@ -18,6 +18,9 @@ alias zconf="v $HOME/.zshrc && szconf"      # automatically sources .zshrc when 
 alias szconf="source $HOME/.zshrc"
 alias vconf="v $HOME/.config/nvim/init.vim"
 
+# ttysolitaire with 10 passes
+alias solitare="ttysolitaire --no-background-color -p 10"
+
 ## --PROMPT-- ##
 PROMPT="%B%K{cyan} %n %k %K{208} in %k %K{yellow}%F{black} %~ %k%f ⌘%b "
 
@@ -38,3 +41,10 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
+
+# --HISTORY-- #
+HISTSIZE=10000
+SAVEHIST=10000
+
+# --OTHER SHIT-- #
+pfetch
