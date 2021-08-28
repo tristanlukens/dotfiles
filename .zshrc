@@ -46,5 +46,6 @@ bindkey -v '^?' backward-delete-char
 HISTSIZE=10000
 SAVEHIST=10000
 
-# --OTHER SHIT-- #
-pfetch
+# --"AUTOSTART" SHIT -- #
+# pfetch                                    # print pfetch
+fortune -s | cowsay                         # print a random fortune quote and make a cow say it
