@@ -19,7 +19,7 @@ alias szconf="source $HOME/.zshrc"
 alias vconf="v $HOME/.config/nvim/init.vim"
 
 # ttysolitaire with 10 passes
-alias solitare="ttysolitaire --no-background-color -p 10"
+alias solitaire="ttysolitaire --no-background-color -p 10"
 
 ## --PROMPT-- ##
 PROMPT="%B%K{cyan} %n %k %K{208} in %k %K{yellow}%F{black} %~ %k%f ⌘%b "
