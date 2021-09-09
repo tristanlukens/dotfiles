@@ -10,5 +10,10 @@
 - zshrc
 - gitconfig
 
+## todo
+- fix init.vim to install vim plug if it isn't installed
+    - also run :PlugInstall if there are any plugins which need to be installed 
+- add alacritty.yml
+
 
 :octocat:
