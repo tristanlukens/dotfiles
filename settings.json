@@ -15,8 +15,5 @@
 	"terminal.integrated.fontFamily": "SF Mono, Menlo",
 	"prettier.tabWidth": 4,
 	"prettier.useTabs": true,
-	"[html]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
 	"editor.defaultFormatter": "esbenp.prettier-vscode"
 }
