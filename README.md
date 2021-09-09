@@ -9,6 +9,7 @@
 - vim/neovim config
 - zshrc
 - gitconfig
+- vscode settings.json
 
 ## todo
 - fix init.vim to install vim plug if it isn't installed
