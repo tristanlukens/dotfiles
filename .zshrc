@@ -16,6 +16,7 @@ alias v=nvim
 alias vim=nvim
 alias zconf="v $HOME/.zshrc && szconf"      # automatically sources .zshrc when it is edited
 alias szconf="source $HOME/.zshrc"
+alias aconf="v $HOME/.config/alacritty/alacritty.yml"
 alias vconf="v $HOME/.config/nvim/init.vim"
 
 # ttysolitaire with 10 passes
