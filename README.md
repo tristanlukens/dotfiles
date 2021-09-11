@@ -16,9 +16,10 @@
 - make README more verbose
 - set up nvim for go and c(++)
 
-### long-term todos
-- move to a tiling wm (chunkwm, amethyst or even hammerspoon/mjolnir and make it myself (or extend rectangle!)) and configure it
 
+
+### long-term todos
+- move to amethyst or create some kind of wm myself. another option is making shortcuts (skhd?) or scripts (applescript? lua?) to manage windows
 
 
 :octocat:
