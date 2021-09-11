@@ -14,4 +14,8 @@
 
 ## todo
 
+- make README more verbose
+- set up nvim for go and c(++)
+- move to a tiling wm (chunkwm, amethyst or even hammerspoon/mjolnir and make it myself (or extend rectangle!)) and configure it
+
 :octocat:
