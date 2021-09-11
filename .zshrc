@@ -14,13 +14,19 @@
 ## --ALIASES-- ##
 alias v=nvim
 alias vim=nvim
-alias zconf="v $HOME/.zshrc && szconf"      # automatically sources .zshrc when it is edited
-alias szconf="source $HOME/.zshrc"
+alias zconf="v $HOME/.zshrc && clear && source $HOME/.zshrc"      # automatically clear screen and source .zshrc when it is edited
 alias aconf="v $HOME/.config/alacritty/alacritty.yml"
 alias vconf="v $HOME/.config/nvim/init.vim"
 
 # ttysolitaire with 10 passes
 alias solitaire="ttysolitaire --no-background-color -p 10"
+
+# check if rosetta's being used (1 is used, 0 is not) and make an alias for brew to use if it is used
+if [[ $(sysctl -n sysctl.proc_translated) == 1 ]]
+then
+    # alias for brew, because brew wants to install shit to /usr/local when using alacritty (which is x86)
+    alias brew="arch -arm64 brew"
+fi
 
 ## --PROMPT-- ##
 PROMPT="%B%K{cyan} %n %k %K{208} in %k %K{yellow}%F{black} %~ %k%f ⌘%b "
