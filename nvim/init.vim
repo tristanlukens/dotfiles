@@ -11,6 +11,13 @@
 
 " very based of of ThePrimeagen's vimrc. https://www.youtube.com/watch?v=n9k9scbTuvQ&t=365s
 
+" PLUGINS
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $HOME/.config/nvim/init.vim
+endif
+
 call plug#begin("~/.local/share/nvim/site/plugged")
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
@@ -22,7 +29,7 @@ call plug#begin("~/.local/share/nvim/site/plugged")
     Plug 'gruvbox-community/gruvbox'
     " ayu theme
     Plug 'ayu-theme/ayu-vim'
-    "coc
+    " coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
@@ -56,14 +63,6 @@ set cursorline
 set history=1000
 
 set wildmenu
-
-" PLUGINS (this is not working now)
-if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 
 " THEME
 " options & requirements for ayu
