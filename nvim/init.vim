@@ -37,6 +37,9 @@ call plug#end()
 " with commented out statusline, isn't working
 source $HOME/.config/nvim/plug-config/coc.vim
 
+" coc extensions
+let g:coc_global_extensions = ['coc-tsserver', 'coc-html', 'coc-emmet', 'coc-json', 'coc-css', 'coc-tailwindcss']
+
 " numbers
 set relativenumber
 set nu
