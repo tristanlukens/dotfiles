@@ -13,8 +13,5 @@
 - alacritty
 
 ## todo
-- add ~/.config/coc to the directory
-    - automatically add extensions and automatically configure it
-
 
 :octocat:
