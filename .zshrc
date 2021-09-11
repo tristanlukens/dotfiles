@@ -21,9 +21,9 @@ alias vconf="v $HOME/.config/nvim/init.vim"
 # ttysolitaire with 10 passes
 alias solitaire="ttysolitaire --no-background-color -p 10"
 
-# check if rosetta's being used (1 is used, 0 is not) and make an alias for brew to use if it is used
-if [[ $(sysctl -n sysctl.proc_translated) == 1 ]]
-then
+# check if kernel name has ARM64 in it, if it does, make an alias for brew
+if [[ $(uname -v | grep "ARM64") != "" ]]
+then 
     # alias for brew, because brew wants to install shit to /usr/local when using alacritty (which is x86)
     alias brew="arch -arm64 brew"
 fi
