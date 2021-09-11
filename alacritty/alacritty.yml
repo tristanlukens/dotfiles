@@ -19,8 +19,10 @@
 #
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
-#import:
-#  - /path/to/alacritty.yml
+import:
+#  theme file. set the theme here too, at the bottom of the file
+#  has to be set in the file itself because yml doesn't support anchors over multiple files
+   - /Users/tristanlukens/.config/alacritty/schemes.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -181,38 +183,12 @@ font:
   #
   # Thin strokes are suitable for retina displays, but for non-retina screens
   # it is recommended to set `use_thin_strokes` to `false`.
-  #use_thin_strokes: true
+  use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (Gruvbox Material Dark Medium)
-# https://github.com/eendroroy/alacritty-theme/blob/master/themes/gruvbox_material.yml
-colors:
-  primary:
-    background: '0x282828'
-    foreground: '0xdfbf8e'
-
-  normal:
-    black:   '0x665c54'
-    red:     '0xea6962'
-    green:   '0xa9b665'
-    yellow:  '0xe78a4e'
-    blue:    '0x7daea3'
-    magenta: '0xd3869b'
-    cyan:    '0x89b482'
-    white:   '0xdfbf8e'
-
-  bright:
-    black:   '0x928374'
-    red:     '0xea6962'
-    green:   '0xa9b665'
-    yellow:  '0xe3a84e'
-    blue:    '0x7daea3'
-    magenta: '0xd3869b'
-    cyan:    '0x89b482'
-    white:   '0xdfbf8e'
-
+#colors:
   # Default colors
   #primary:
   #  background: '#1d1f21'
