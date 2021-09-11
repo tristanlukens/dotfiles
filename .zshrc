@@ -42,6 +42,11 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)       			# Include hidden files.
 
+# make autocomplete case insensitive
+# https://stackoverflow.com/questions/24226685/have-zsh-return-case-insensitive-auto-complete-matches-but-prefer-exact-matches
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+autoload -Uz compinit && compinit
+
 # vim keys in tab complete mode
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
