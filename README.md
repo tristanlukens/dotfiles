@@ -9,6 +9,9 @@
 - gitconfig
 - vscode settings.json
 - alacritty
+- rectangle
+- macOS preferences
+  - **dock**
 
 
 
