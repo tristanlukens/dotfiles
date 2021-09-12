@@ -43,6 +43,7 @@ let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', 'coc-html', 'coc-
 " set up prettier for coc
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
+" SETUP
 " numbers
 set relativenumber
 set nu
@@ -89,3 +90,9 @@ set statusline+=%#Search#
 set statusline+=\ [%l
 set statusline+=\ of
 set statusline+=\ %L]
+
+" REMAPS
+let mapleader = "\<Space>"
+
+" mapping nerdtreetoggle to leader+`
+nnoremap <leader>` :NERDTreeToggle<CR>
