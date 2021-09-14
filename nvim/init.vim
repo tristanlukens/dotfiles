@@ -58,7 +58,7 @@ set expandtab
 set smartindent
 
 " cursor
-set guicursor=
+set guicursor=i:ver25-iCursor
 
 " text wrapping off
 set nowrap
