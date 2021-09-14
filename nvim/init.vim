@@ -38,7 +38,7 @@ call plug#end()
 source $HOME/.config/nvim/plug-config/coc.vim
 
 " coc extensions
-let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', 'coc-html', 'coc-emmet', 'coc-json', 'coc-css', 'coc-tailwindcss']
+let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', 'coc-html', 'coc-emmet', 'coc-json', 'coc-css', 'coc-tailwindcss', 'coc-svelte']
 
 " set up prettier for coc
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
