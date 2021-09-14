@@ -96,3 +96,5 @@ let mapleader = "\<Space>"
 
 " mapping nerdtreetoggle to leader+`
 nnoremap <leader>` :NERDTreeToggle<CR>
+" get rid of highlighting of previous search
+nnoremap <C-k> :noh<CR>
