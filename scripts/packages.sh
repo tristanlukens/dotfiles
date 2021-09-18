@@ -33,10 +33,10 @@ brew install go
 brew install htop
 brew install gotop
 brew install youtube-dl
-brew install sld2
+brew install sdl2
+brew install cowsay
+brew install fortune
 # optional formulae. uncomment one if you need it
-#brew install cowsay
-#brew install fortune
 #brew install pfetch
 #brew install lolcat
 #brew install figlet
