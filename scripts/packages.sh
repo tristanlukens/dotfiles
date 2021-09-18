@@ -54,6 +54,7 @@ brew install typora
 brew install visual-studio-code
 brew install amethyst
 brew install coconutbattery
+brew install barrier
 # optional casks. uncomment one if you need it
 #brew install godot
 #brew install blender
