@@ -39,7 +39,7 @@ defaults write com.apple.Dock show-recents -bool false
 defaults write com.apple.Dock tilesize -int 35
 
 # making the dock go to the left side of the screen
-defaults write com.apple.Dock orientation -string left
+defaults write com.apple.Dock orientation -string bottom
 
 # turning on dock magnification
 defaults write com.apple.Dock magnification -bool true
