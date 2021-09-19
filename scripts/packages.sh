@@ -22,6 +22,9 @@
 
 # installing the xcode command line tools
 # this is a prerequisite for installing brew
+
+# not required all the time, because cloning the dotfiles
+# repo needs git, which will prompt downloading the xcode command line tools
 xcode-select --install
 # installing brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -36,15 +39,15 @@ brew install youtube-dl
 brew install sdl2
 brew install cowsay
 brew install fortune
-# optional formulae. uncomment one if you need it
+# terminal games
+brew install tty-solitaire
+brew install nsnake
+# optional formulae. uncomment when needed
 #brew install pfetch
 #brew install lolcat
 #brew install figlet
 #brew install cmatrix
 #brew install asciiquarium
-# terminal games
-brew install tty-solitaire
-brew install nsnake
 # casks
 brew install rectangle
 brew install alacritty
@@ -52,10 +55,10 @@ brew install spotify
 brew install minecraft
 brew install typora
 brew install visual-studio-code
-brew install amethyst
 brew install coconutbattery
 brew install barrier
 # optional casks. uncomment one if you need it
+#brew install amethyst
 #brew install godot
 #brew install blender
 #brew install magicavoxel
