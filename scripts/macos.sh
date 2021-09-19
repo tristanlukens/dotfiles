@@ -50,5 +50,43 @@ defaults write com.apple.Dock largesize -int 45
 # "applying" the changes by restarting the dock
 killall Dock
 
+
 # --FINDER-- #
 
+# reset
+defaults delete com.apple.Finder
+
+# DESKTOP
+# enable stacks (by kind)
+defaults write com.apple.Finder DesktopViewSettings -dict-add GroupBy -string Kind
+
+# sort the stacks by kind
+defaults write com.apple.Finder DesktopViewSettings -dict-add IconViewSettings "{arrageBy=kind;}"
+
+# set the default file path for new finder window
+defaults write com.apple.Finder NewWindowTarget -string "PfLo"
+defaults write com.apple.Finder NewWindowTargetPath -string file://${HOME}
+
+# making finder be able to be quit; doing so also hides all desktop icons
+defaults write com.apple.Finder QuitMenuItem -bool true
+
+# show hidden files by default
+defaults write com.apple.Finder AppleShowAllFiles -bool true
+
+# show the status bar by default
+defaults write com.apple.Finder ShowStatusBar -bool true
+
+# show all hard disks and connected servers on the desktop
+defaults write com.apple.Finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.Finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.FInder ShowMountedServersOnDesktop -bool true
+
+# change the default view style of finder to list
+defaults write com.apple.Finder FXPreferredViewStyle Nlsv
+
+# "applying" the chages by restarting finder
+killall Finder
+
+
+# show all filename extensions
+#defaults write NSGlobalDomain AppleShowAllExtensions -bool true
