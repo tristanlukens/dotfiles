@@ -15,8 +15,8 @@
 # is an x86 machine. if I don't forget, I will delete this comment when you don't need
 # to worry about this
 
-# note that in this file, if there is a comment followed by a space, it will not ever be uncommented.
-# if it is not followed by a space, it may be uncommented if you need it to be uncommented
+# note that in this file, if there is a comment followed by a space, it is not meant to be uncommented.
+# if it is not followed by a space, it may be uncommented (meaning it's a valid valid command)
 
 #!/bin/sh
 
