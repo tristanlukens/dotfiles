@@ -17,5 +17,6 @@
 	"prettier.useTabs": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.detectIndentation": false,
-	"svelte.enable-ts-plugin": true
+	"svelte.enable-ts-plugin": true,
+	"editor.quickSuggestionsDelay": 1000
 }
