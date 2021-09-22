@@ -27,7 +27,7 @@ defaults write com.apple.Dock autohide -bool true
 defaults write com.apple.Dock autohide-delay -int 0
 
 # editing the dock appearing speed (setting it to 0.4 seconds)
-defaults write com.apple.Dock autohide-time-modifier -float 0.4
+#defaults write com.apple.Dock autohide-time-modifier -float 0.4
 
 # turn on showing hidden apps transparently in dock
 defaults write com.apple.Dock showhidden -bool true
