@@ -68,7 +68,7 @@ defaults write com.apple.Finder NewWindowTarget -string "PfLo"
 defaults write com.apple.Finder NewWindowTargetPath -string file://${HOME}
 
 # making finder be able to be quit; doing so also hides all desktop icons
-defaults write com.apple.Finder QuitMenuItem -bool true
+#defaults write com.apple.Finder QuitMenuItem -bool true
 
 # show hidden files by default
 defaults write com.apple.Finder AppleShowAllFiles -bool true
