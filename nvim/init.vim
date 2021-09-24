@@ -98,3 +98,8 @@ let mapleader = "\<Space>"
 nnoremap <leader>` :NERDTreeToggle<CR>
 " get rid of highlighting of previous search
 nnoremap <C-k> :noh<CR>
+" use meta + arrow keys to resize vsplit or split
+nmap <M-Right> :vertical resize +1<CR>
+nmap <M-Left> :vertical resize -1<CR>
+nmap <M-Down> :resize +1<CR>
+nmap <M-Up> :resize -1<CR>
