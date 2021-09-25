@@ -4,6 +4,7 @@
 # | |_) | (_| | (__|   < (_| | (_| |  __/\__ \
 # | .__/ \__,_|\___|_|\_\__,_|\__, |\___||___/
 # |_|                         |___/
+#
 
 # brew packages install script by Tristan Lukens
 # tristanlukens.com
