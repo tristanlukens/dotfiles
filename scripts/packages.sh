@@ -40,7 +40,6 @@ brew install youtube-dl
 brew install sdl2
 brew install cowsay
 brew install fortune
-brew install dockutil
 # terminal games
 brew install tty-solitaire
 brew install nsnake
@@ -59,6 +58,7 @@ brew install typora
 brew install visual-studio-code
 brew install coconutbattery
 brew install barrier
+brew install firefox
 # optional casks. uncomment one if you need it
 #brew install amethyst
 #brew install godot
