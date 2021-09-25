@@ -17,7 +17,7 @@ alias vim=nvim
 alias zconf="v $HOME/.zshrc && clear && source $HOME/.zshrc"      # automatically clear screen and source .zshrc when it is edited
 alias aconf="v $HOME/.config/alacritty/alacritty.yml"
 alias vconf="v $HOME/.config/nvim/init.vim"
-alias ls="ls -la"
+alias la="ls -la"
 
 # ttysolitaire with 10 passes
 alias solitaire="ttysolitaire --no-background-color -p 10"
