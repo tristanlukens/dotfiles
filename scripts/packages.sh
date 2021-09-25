@@ -40,6 +40,7 @@ brew install youtube-dl
 brew install sdl2
 brew install cowsay
 brew install fortune
+brew install dockutil
 # terminal games
 brew install tty-solitaire
 brew install nsnake
