@@ -26,11 +26,12 @@ this by moving to another font entirely.
     though, because you can do `git pull [directory]` but I'm not sure on that one
 - move to another font (which is for linux too)
 - make a macOS setup shell script, and put anything which cannot be managed or is difficult to manage with shell scripts in README
-
+- when cd is used in terminal, execute ls too
 
 
 ### long-term todos
 - move to amethyst or create some kind of wm myself. another option is making shortcuts (skhd?) or scripts (applescript? lua?) to manage windows
+- move to LSP for autocomplete instead of coc
 
 
 
