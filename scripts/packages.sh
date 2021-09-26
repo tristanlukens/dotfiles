@@ -21,9 +21,10 @@
 
 #!/bin/sh
 
+# --BREW-- #
+
 # installing the xcode command line tools
 # this is a prerequisite for installing brew
-
 # not required all the time, because cloning the dotfiles
 # repo needs git, which will prompt downloading the xcode command line tools
 xcode-select --install
@@ -40,17 +41,18 @@ brew install youtube-dl
 brew install sdl2
 brew install cowsay
 brew install fortune
-
-# terminal games
+brew install c2048
 brew install tty-solitaire
 brew install nsnake
+brew install cot
+brew install pfetch
+brew install lolcat
+brew install figlet
+brew install cmatrix
+brew install asciiquarium
 
-# optional formulae. uncomment when needed
-#brew install pfetch
-#brew install lolcat
-#brew install figlet
-#brew install cmatrix
-#brew install asciiquarium
+# formulae with seperate taps
+brew tap coteditor/coteditor
 
 # casks
 brew install rectangle
@@ -62,9 +64,12 @@ brew install visual-studio-code
 brew install coconutbattery
 brew install barrier
 brew install firefox
+brew install github
+brew install google-chrome
+brew install coteditor
+brew install boop
 
-# optional casks. uncomment one if you need it
-#brew install amethyst
+# optional casks. uncomment if needed
 #brew install godot
 #brew install blender
 #brew install magicavoxel
@@ -72,3 +77,13 @@ brew install firefox
 #brew install figma
 #brew install gimp
 #brew install inkscape
+
+
+# --NPM-- #
+npm i -g typescript
+npm i -g live-server
+npm i -g prettier
+npm i -g rollup
+npm i -g nodemon
+npm i -g postcss-cli
+npm i -g vue-cli
