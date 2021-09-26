@@ -11,8 +11,8 @@
 
 #!/bin/sh
 
-# run this script to make all the symlinks on macOS
-# this script presumes the dotfiles directory is located in $HOME
+# this script is cross-compatible, meaning it can be used on Linux and macOS
+# it presumes the dotfiles directory is located in $HOME
 
 # make this variable the location of the dotfiles directory's location
 LOC="$HOME/dotfiles"
