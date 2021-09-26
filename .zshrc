@@ -17,10 +17,8 @@ alias vim=nvim
 alias zconf="v $HOME/.zshrc && clear && source $HOME/.zshrc"      # automatically clear screen and source .zshrc when it is edited
 alias aconf="v $HOME/.config/alacritty/alacritty.yml"
 alias vconf="v $HOME/.config/nvim/init.vim"
+alias solitaire="ttysolitaire --no-background-color -p 10"        # ttysolitaire with 10 passes
 alias la="ls -la"
-
-# ttysolitaire with 10 passes
-alias solitaire="ttysolitaire --no-background-color -p 10"
 
 # check if kernel name has ARM64 in it, if it does, make an alias for brew
 if [[ $(uname -v | grep "ARM64") != "" ]]
