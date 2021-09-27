@@ -7,6 +7,7 @@
 To make EVERYTING work exactly how I want it, you need the SF fonts (by apple, so not for linux). I will probably fix
 this by moving to another font entirely.
 
+I tried to set up vim for go but this is not finished yet, so things aren't working
 
 
 ## items
