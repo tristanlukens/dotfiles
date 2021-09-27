@@ -203,6 +203,7 @@ Screenshot destination folder: `$HOME/Pictures`
 - Homepage: https://duckduckgo.com **in General**
 - Search engine: DuckDuckGo **in Search**
 - Show full website address: ticked **in Advanced**
+- Show Develop menu in menu bar: ticked **in Advanced **
 - show everything on startpage
 - edit the background image on startpage, choose one of the wallpapers from the repo
 
