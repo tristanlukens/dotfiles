@@ -197,6 +197,10 @@ Screenshot destination folder: `$HOME/Pictures`
 - Turn on Stacks
 - Stack By Kind
 - Sort By Name
+- On the right side of the dock (after the line), in the Downloads, Documents etc folders, click the following
+	- Sort by Date Added (for Applications, leave it on Sort by Name)
+	- DIsplay as Folder
+	- View content as Grid
 
 ### Safari
 
