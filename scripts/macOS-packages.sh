@@ -31,25 +31,31 @@ xcode-select --install
 # installing brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# required formulae
+# formulae
 brew install nvim
 brew install node
 brew install go
 brew install htop
 brew install gotop
 brew install youtube-dl
-brew install sdl2
+brew install sdl2                       # I might use sdl2 for go based apps
 brew install cowsay
 brew install fortune
 brew install c2048
 brew install tty-solitaire
 brew install nsnake
 brew install cot
+brew install ncurses                    # might use it for projects in future
 brew install pfetch
 brew install lolcat
 brew install figlet
 brew install cmatrix
 brew install asciiquarium
+brew install git                        # Xcode's git is old, install this git. It will automatically point to this new version of git
+brew install pipes-sh
+brew install tree
+brew install vifm
+brew install tty-clock
 
 # formulae with seperate taps
 brew tap coteditor/coteditor
@@ -58,9 +64,11 @@ brew tap coteditor/coteditor
 brew install rectangle
 brew install alacritty
 brew install spotify
+brew install steam
 brew install minecraft
 brew install typora
 brew install visual-studio-code
+brew install sublime-text
 brew install coconutbattery
 brew install barrier
 brew install firefox
@@ -68,22 +76,26 @@ brew install github
 brew install google-chrome
 brew install coteditor
 brew install boop
+brew install obs
+brew install balenaetcher
+brew install discord
+brew install figma
+brew install blender
+brew install magicavoxel
+brew install godot
+brew install atom
+brew install gimp
+brew install inkscape
 
-# optional casks. uncomment if needed
-#brew install godot
-#brew install blender
-#brew install magicavoxel
-#brew install atom
-#brew install figma
-#brew install gimp
-#brew install inkscape
-
+brew install dropbox
 
 # --NPM-- #
+
 npm i -g typescript
 npm i -g live-server
 npm i -g prettier
 npm i -g rollup
+npm i -g yarn
 npm i -g nodemon
 npm i -g postcss-cli
 npm i -g vue-cli
