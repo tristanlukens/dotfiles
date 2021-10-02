@@ -2,19 +2,27 @@
 
 
 
-The reason for me to use a markdown file instead of writing a setup script (which I tried) is because **some apps need permission to do things** and **it is extremely hard to find what commands you need in what domain** to edit settings. I am certain everything is possible with shell scripts, but it is too hard for me right now.
+The reason for me to use a markdown file instead of writing a setup script (which I tried) is because **some apps need permission to do things** and **it is extremely hard to find what commands you need in what domain** (defaults command) to edit settings. I am certain everything is possible with shell scripts, but it is too hard for me right now.
 
 
 
-## Updates
+*Note that this setup is based on macOS 11 Big Sur. I do not know if this setup will still work in future, or in older versions of macOS. Things might be located somewhere different in other versions.*
 
-First check if the whole system is up-to-date.
+
+
+This setup is far from complete. If I'm using a Mac and seeing a preference to change, I will.
 
 
 
 ### Time Machine
 
 Make a Time Machine backup if possible.
+
+
+
+## Updates
+
+First check if the whole system is up-to-date.
 
 
 
@@ -97,8 +105,6 @@ For some preferences I like to use, you need Tinkertool. It is not in brew thoug
 
 ## macOS Preferences
 
-*Note that these preferences are based of of macOS 11 Big Sur. I do not know if these settings will still work in future, or in older versions of macOS. They might be located somewhere different in other versions.*
-
 ### System Preferences
 
 #### Dock
@@ -142,7 +148,9 @@ Apps will ask for permissions when they need them. Give them permissions when th
 
 I think I left everything default, but there might be something.
 
-- Turn keyboard backlight off after **10 secs** of inactivity
+- Turn keyboard backlight off after **10 secs** of inactivity **in Keyboard**
+- Key Repeat: $\frac{7}{8}$
+- Delay Until Repeat: $\frac{5}{6}$
 
 > When playing Minecraft, turning on the **Use F1, F2, etc. keys as standard function keys** is recommended
 
@@ -264,3 +272,10 @@ Open brewlet, and go to Preferences. Change the following.
 - show absolute path in window title: `defaults write com.apple.finder _FXShowPosixPathInTitle -bool true`
 - show hidden files by default: `defaults write com.apple.finder AppleShowAllFiles -bool true`
 
+### Visual Studio Code
+
+- when a key is held down, hold it down like in other OSs instead of showing accents etc for the letter: `defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false`
+
+### Sublime Text
+
+- when a key is held down, hold it down like in other OSs instead of showing accents etc for the letter: `defaults write com.sublimetext.4 ApplePressAndHoldEnabled -bool false`
