@@ -56,6 +56,7 @@ brew install pipes-sh
 brew install tree
 brew install vifm
 brew install tty-clock
+brew install brewlet
 
 # formulae with seperate taps
 brew tap coteditor/coteditor
@@ -86,6 +87,11 @@ brew install godot
 brew install atom
 brew install gimp
 brew install inkscape
+
+# install virtualbox if kernel release has X86 in its name, arm doesn't support virtualisation
+if uname -v | grep -q "X68_64"; then
+    brew install virtualbox
+fi
 
 brew install dropbox
 

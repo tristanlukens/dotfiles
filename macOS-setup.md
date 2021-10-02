@@ -6,6 +6,18 @@ The reason for me to use a markdown file instead of writing a setup script (whic
 
 
 
+## Updates
+
+First check if the whole system is up-to-date.
+
+
+
+### Time Machine
+
+Make a Time Machine backup if possible.
+
+
+
 ## Dotfiles
 
 - clone [the repo](https://github.com/tristanlukens/dotfiles) into `$HOME`
@@ -25,7 +37,7 @@ The reason for me to use a markdown file instead of writing a setup script (whic
 
 ## Visual Studio Code
 
-I use the built in Settings Sync.
+I use (built in) Settings Sync.
 
 - open Visual Studio Code
 - press **⌘**+**,** to go to Settings
@@ -46,6 +58,13 @@ Install the following apps from the App Store.
 - WhatsApp Desktop
 - optional: the iWork suite
 - optional: the whole MS Office suite
+
+
+
+Apps to be installed via the App Store if not installed with `brew`:
+
+- Boop
+- CotEditor
 
 
 
@@ -189,6 +208,7 @@ Screenshot destination folder: `$HOME/Pictures`
 - Show all filename extensions: ticked
 - Keep folders on top: both ticked
 - When performing a search: Search the Current Folder
+- ⌘+/ to show statusbar
 - If MagicaVoxel is installed, put its folder in the sidebar.
 - If Minecraft is installed, put its folder in the sidebar.
 
@@ -219,13 +239,28 @@ Screenshot destination folder: `$HOME/Pictures`
 
 - WhatFont
 
+### Brewlet
+
+Open brewlet, and go to Preferences. Change the following.
+
+- Include dependency updates: ticked
+- Share Analytics: unticked
+
+### Messages
+
+- Enable Messages in iCloud: ticked **in iMessage**. After that, press Sync Now
+
+### Typora
+
+**edit this later, I have no idea of Typora's defaults**
+
 
 
 ## `defaults` command only settings
 
 ### Finder
 
-- change the default view to list: `defaults write com.apple.finder FXPreferredViewStyle -string Nlsv`
+- change the default view to *List*: `defaults write com.apple.finder FXPreferredViewStyle -string Nlsv`
 - show absolute path in window title: `defaults write com.apple.finder _FXShowPosixPathInTitle -bool true`
 - show hidden files by default: `defaults write com.apple.finder AppleShowAllFiles -bool true`
 
