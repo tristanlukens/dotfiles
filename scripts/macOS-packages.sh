@@ -89,7 +89,7 @@ brew install gimp
 brew install inkscape
 
 # install virtualbox if kernel release has X86 in its name, arm doesn't support virtualisation
-if uname -v | grep -q "X68_64"; then
+if uname -v | grep -q "X86_64"; then
     brew install virtualbox
 fi
 
