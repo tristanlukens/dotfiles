@@ -10,7 +10,7 @@ The reason for me to use a markdown file instead of writing a setup script (whic
 
 
 
-This setup is far from complete. If I'm using a Mac and seeing a preference to change, I will.
+This setup is far from complete. If I'm using a Mac and see a preference to change, I will.
 
 
 
@@ -36,10 +36,17 @@ First check if the whole system is up-to-date.
 
 
 
+## Hushlogin
+
+Run `touch .hushlogin` is in `$HOME`. This will suppress the last login message in the terminal.
+
+
+
 ## Wallpapers
 
 - clone [the repo](https://github.com/tristanlukens/wallpapers) into `$HOME/Pictures`
 - set one of the wallpapers using **Set Desktop Picture** in the right click menu
+- add `$HOME/Pictures/wallpapers` to System Preferences in Desktop & Screen Saver by pressing the + button
 
 
 
@@ -64,6 +71,7 @@ Install the following apps from the App Store.
 - GarageBand
 - iMovie
 - WhatsApp Desktop
+- Speedtest
 - optional: the iWork suite
 - optional: the whole MS Office suite
 
@@ -81,7 +89,6 @@ Apps to be installed via the App Store if not installed with `brew`:
 I only install a couple of fonts, and all of the following fonts are on [Google Fonts](https://fonts.google.com).
 
 - Roboto Mono
-- Lilex
 - DM Mono
 - Poppins
 - Montserrat
@@ -94,6 +101,7 @@ In addition, I do use some other fonts, which are not on Google Fonts.
 - [Cascadia Code](https://github.com/microsoft/cascadia-code)
 - [Mohave](https://www.1001fonts.com/mohave-font.html)
 - [SF + New York Fonts](https://developer.apple.com/fonts/) (macOS only, installed with .dmg)
+- [Lilex](https://github.com/mishamyrt/Lilex)
 
 
 
@@ -149,8 +157,9 @@ Apps will ask for permissions when they need them. Give them permissions when th
 I think I left everything default, but there might be something.
 
 - Turn keyboard backlight off after **10 secs** of inactivity **in Keyboard**
-- Key Repeat: $\frac{7}{8}$
-- Delay Until Repeat: $\frac{5}{6}$
+- I don't always use the following settings, but they're good to know of
+	- Key Repeat: $\frac{8}{8}$
+	- Delay Until Repeat: $\frac{6}{6}$
 
 > When playing Minecraft, turning on the **Use F1, F2, etc. keys as standard function keys** is recommended
 
