@@ -100,6 +100,7 @@ brew install dropbox
 npm i -g typescript
 npm i -g live-server
 npm i -g prettier
+npm i -g sass
 npm i -g rollup
 npm i -g yarn
 npm i -g nodemon
