@@ -152,12 +152,24 @@ Change the profile picture to bike.png (located on the NAS (and probably somewhe
 
 Apps will ask for permissions when they need them. Give them permissions when they ask for them.
 
+#### Bluetooth
+
+Show Bluetooth in menu bar: **ticked**
+
+#### Sound
+
+Show volume in menu bar: **ticked**
+
+#### Printers & Scanners
+
+Add these if neede
+
 #### Keyboard
 
 I think I left everything default, but there might be something.
 
 - Turn keyboard backlight off after **10 secs** of inactivity **in Keyboard**
-- I don't always use the following settings, but they're good to know of
+- I don't always use the following settings, but they're good to know of. Defaults are also good
 	- Key Repeat: $\frac{8}{8}$
 	- Delay Until Repeat: $\frac{6}{6}$
 
@@ -221,11 +233,13 @@ Screenshot destination folder: `$HOME/Pictures`
 - Turn off all tags in sidebar **in Tags**
 - Untick the following items **in Sidebar**. All else needs to be ticked
 	- Recents
+	- AirDrop (maybe)
 	- Recent Tags
 - Show all filename extensions: ticked
 - Keep folders on top: both ticked
 - When performing a search: Search the Current Folder
 - ⌘+/ to show statusbar
+- Put `$HOME$` at the top of the sidebar
 - If MagicaVoxel is installed, put its folder in the sidebar.
 - If Minecraft is installed, put its folder in the sidebar.
 
@@ -262,6 +276,11 @@ Open brewlet, and go to Preferences. Change the following.
 
 - Include dependency updates: ticked
 - Share Analytics: unticked
+- open at login needs to be on:
+	- turn off Don't allow to modify content in Dock in TinkerTool
+	- put Brewlet in Dock
+	- click right click > Options > Open at Login
+	- turn on Don't allow to modify content in Dock in TinkerTool
 
 ### Messages
 
@@ -269,7 +288,13 @@ Open brewlet, and go to Preferences. Change the following.
 
 ### Typora
 
-**edit this later, I have no idea of Typora's defaults**
+- change the size of the window a bit and center the window, this will be persistent
+- Send Anonymous Usage Info: unticked **in General**
+- Theme: Github **in Appearance**
+- When insert: Copy image to current folder (./) **in Image**
+- Auto pair common Markdown syntax: ticked
+- Syntax support: *tick all*
+- zoom out to 90%
 
 
 
