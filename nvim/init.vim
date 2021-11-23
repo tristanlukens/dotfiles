@@ -63,7 +63,7 @@ set smartindent
 set guicursor=i:ver25-iCursor
 
 " text wrapping off
-set nowrap
+set wrap
 
 " line highlighting
 set cursorline
