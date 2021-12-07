@@ -17,5 +17,5 @@ LOC="$HOME/dotfiles" # location of the dotfiles directory
 
 ln -s $LOC/nvim $HOME/.config/nvim
 ln -s $LOC/.gitconfig $HOME/.gitconfig
-ln -s $LOC/.zshrc $HOME/.zshrc
+ln -s $LOC/.zshenv $HOME/.zshenv
 ln -s $LOC/alacritty $HOME/.config/alacritty
