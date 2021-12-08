@@ -10,6 +10,21 @@
 
 # comments correspond to the command UNDERNEATH
 
+## --BUGFIXES-- ##
+# https://stackoverflow.com/questions/36657321/after-installing-homebrew-i-get-zsh-command-not-found-brew
+# first command because other commands depend on it :)
+export PATH=/opt/homebrew/bin:$PATH
+
+## --ZPLUG-- ##
+export ZPLUG_HOME="$HOME/.zplug"
+source $ZPLUG_HOME/init.zsh
+
+if [[ $(zplug --version | grep -q "command not found") == "" ]]
+then
+    # install
+    curl -sL --proto-redir -jll,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh >> /dev/null
+fi
+
 ## --ALIASES-- ##
 alias v=nvim
 alias vim=nvim
@@ -35,7 +50,3 @@ PROMPT="%B%K{cyan} %n %k %K{208} in %k %K{yellow}%F{black} %~ %k%f λ%b "
 
 ## --AUTOSTART-- ##
 fortune | cowsay
-
-## --FIXES-- ##
-# https://stackoverflow.com/questions/36657321/after-installing-homebrew-i-get-zsh-command-not-found-brew
-export PATH=/opt/homebrew/bin:$PATH
