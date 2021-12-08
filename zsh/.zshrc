@@ -15,16 +15,6 @@
 # first command because other commands depend on it :)
 export PATH=/opt/homebrew/bin:$PATH
 
-## --ZPLUG-- ##
-export ZPLUG_HOME="$HOME/.zplug"
-source $ZPLUG_HOME/init.zsh
-
-if [[ $(zplug --version | grep -q "command not found") == "" ]]
-then
-    # install
-    curl -sL --proto-redir -jll,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh >> /dev/null
-fi
-
 ## --ALIASES-- ##
 alias v=nvim
 alias vim=nvim
