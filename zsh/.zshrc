@@ -11,7 +11,7 @@
 # comments correspond to the command UNDERNEATH
 
 # correct this if the dotfiles directory is somewhere else
-DOTS="$HOME/dotfiles"
+export DOTS="$HOME/dotfiles"
 
 ## --BUGFIXES-- ##
 # https://stackoverflow.com/questions/36657321/after-installing-homebrew-i-get-zsh-command-not-found-brew
