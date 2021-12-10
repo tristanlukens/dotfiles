@@ -31,6 +31,7 @@ alias vconf="v $DOTS/nvim/init.vim"
 
 alias solitaire="ttysolitaire --no-background-color -p 10"
 alias la="ls -la"
+alias t="tree -Ca"
 
 # alias for brew, because brew wants to install shit to /usr/local when using a rosetta emulated terminal emulator
 if [[ $(uname -v | grep "ARM64") != "" ]]; then
