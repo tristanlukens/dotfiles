@@ -10,19 +10,39 @@
 
 #!/bin/sh
 
-# this script is cross-compatible, meaning it can be used on Linux and macOS
-# it presumes the dotfiles directory is located in $HOME
+# this script is cross-compatible, meaning it can be used in Linux and macOS
 
-# files with a dot are not prefixed with a dot in this directory (but the aliases are of course)
+# $DOTS is declared in .zshrc, but in a bootstrap script, it is not yet. if it does not exists yet, create it here, locally
+if [[ ! $DOTS ]]; then
+    DOTS="$HOME/dotfiles"
+fi
 
-# some are however! I am linking the whole zsh directory, so the files within NEED to be prefixed with a dot, ergo TODO: declare the symlinks in a for loop which prefixes ALL seperate files, so no directories, with a dot so they aren't screwed when linking
+# lists in which the orders matter
+FILES=(
+	"$DOTS/zsh/zshenv"
+    "$DOTS/zsh/zshrc"
+    "$DOTS/gitconfig"
+    "$DOTS/nvim"
+    "$DOTS/alacritty"
+)
+DEST=(
+	"$HOME/.zshenv"
+	"$HOME/.config/zsh/.zshrc"
+    "$HOME/.gitconfig"
+    "$HOME/.config/nvim"
+	"$HOME/.config/alacritty"
+)
 
-# an alternative option would be not using ZDOTDIR at all and use directories in this dotfiles directory but just put every symlink in the home directory
+# index for getting the index of DEST
+INDEX=0
 
-LOC="$HOME/dotfiles" # location of the dotfiles directory
+# creating the symlink by using the first
+# file as the original, and the destination
+# will be the index of $DEST. after this,
+# increment the index by 1
+# https://linuxize.com/post/bash-increment-decrement-variable/
+for file in ${FILES[@]}; do
+    ln -s $file ${DEST[$INDEX]}
+    ((INDEX=INDEX+1))
+done
 
-ln -s $LOC/nvim $HOME/.config/nvim
-ln -s $LOC/gitconfig $HOME/.gitconfig
-ln -s $LOC/zshenv $HOME/.zshenv                   # file
-ln -s $LOC/zsh $HOME/.config/zsh                  # directory
-ln -s $LOC/alacritty $HOME/.config/alacritty
