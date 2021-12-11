@@ -31,7 +31,7 @@ alias vconf="v $DOTS/nvim/init.vim"
 
 alias solitaire="ttysolitaire --no-background-color -p 10"
 alias la="ls -la"
-alias t="tree -Ca"
+alias t="tree -CaI .git"
 
 # alias for brew, because brew wants to install shit to /usr/local when using a rosetta emulated terminal emulator
 if [[ $(uname -v | grep "ARM64") != "" ]]; then
@@ -50,4 +50,9 @@ fortune | cowsay
 # I might not use this forever, since it slows the load time of the shell down a lot
 autoload -Uz compinit
 compinit -d $HOME/.cache/zsh/zcompdump-$ZSH_VERSION
+
+# https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=$HOME/.cache/zsh/history
 
