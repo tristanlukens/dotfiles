@@ -19,6 +19,11 @@ if [[ ! $DOTS ]]; then
     DOTS="$HOME/dotfiles"
 fi
 
+# check if .config exists, if it does not, make it
+if [[ ! $HOME/.config ]]; then
+    mkdir $HOME/.config
+fi
+
 # lists in which the orders matter
 FILES=(
 	"$DOTS/zsh/zshenv"
