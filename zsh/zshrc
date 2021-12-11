@@ -13,17 +13,20 @@
 # correct this if the dotfiles directory is somewhere else
 export DOTS="$HOME/dotfiles"
 
-## --BUGFIXES-- ##
+## --THINGS THAT NEED TO BE ON TOP-- ##
 # https://stackoverflow.com/questions/36657321/after-installing-homebrew-i-get-zsh-command-not-found-brew
 export PATH=/opt/homebrew/bin:$PATH
+source $DOTS/zsh/powerlevel10k.zsh
 
 ## --ZINIT-- ##
 # contains everything zinit needs to install if needed and to source the correct files
 source $DOTS/zsh/zinit.zsh
 
 # https://github.com/jeffreytse/zsh-vi-mode
-zinit ice depth=1
-zinit light jeffreytse/zsh-vi-mode
+zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
+
+# https://github.com/romkatv/powerlevel10k#zinit
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 ## --ALIASES-- ##
 alias v=nvim
@@ -47,6 +50,8 @@ PROMPT="%B%K{cyan} %n %k %K{208} in %k %K{yellow}%F{black} %~ %k%f λ%b "
 
 ## --AUTOSTART-- ##
 fortune | cowsay
+# echo an empty line for "margin"
+echo ""
 
 ## VI MODE-- ##
 # https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
@@ -65,3 +70,5 @@ HISTFILE=$HOME/.cache/zsh/history
 autoload -Uz compinit
 compinit -d $HOME/.cache/zsh/zcompdump-$ZSH_VERSION
 
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

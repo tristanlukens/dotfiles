@@ -12,6 +12,8 @@
 
 # this script is cross-compatible, meaning it can be used in Linux and macOS
 
+# scripts that are used by these files ARE NOT SYNCED. they are run with a simple source with the $DOTS variable
+
 # $DOTS is declared in .zshrc, but in a bootstrap script, it is not yet. if it does not exists yet, create it here, locally
 if [[ ! $DOTS ]]; then
     DOTS="$HOME/dotfiles"
