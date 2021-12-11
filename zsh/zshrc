@@ -8,15 +8,15 @@
 # zshrc by Tristan Lukens
 # tristanlukens.github.io
 
-# comments correspond to the command UNDERNEATH
-
-# correct this if the dotfiles directory is somewhere else
+# Some things that need to be said/done
+# - comments correspond to the command UNDERNEATH
+# - file is cross-compatible (hooray!)
+# - correct this if the dotfiles directory is somewhere else
 export DOTS="$HOME/dotfiles"
 
-## --THINGS THAT NEED TO BE ON TOP-- ##
-# https://stackoverflow.com/questions/36657321/after-installing-homebrew-i-get-zsh-command-not-found-brew
-export PATH=/opt/homebrew/bin:$PATH
-source $DOTS/zsh/powerlevel10k.zsh
+## --OS SPECIFIC-- ##
+OS=$(uname -s)
+[[ $OS = "Darwin" ]] && export PATH=/opt/homebrew/bin:$PATH
 
 ## --ZINIT-- ##
 # contains everything zinit needs to install if needed and to source the correct files
@@ -24,9 +24,6 @@ source $DOTS/zsh/zinit.zsh
 
 # https://github.com/jeffreytse/zsh-vi-mode
 zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
-
-# https://github.com/romkatv/powerlevel10k#zinit
-zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 ## --ALIASES-- ##
 alias v=nvim
@@ -40,13 +37,23 @@ alias solitaire="ttysolitaire --no-background-color -p 10"
 alias la="ls -la"
 alias t="tree -CaI .git"
 
-# alias for brew, because brew wants to install shit to /usr/local when using a rosetta emulated terminal emulator
-if [[ $(uname -v | grep "ARM64") != "" ]]; then
-    alias brew="arch -arm64 brew"
-fi
+# alias for brew, because brew wants to install shit to /usr/local when using a rosetta emulated terminal emulator.
+[[ $(uname -v | grep "ARM64") != "" ]] && alias brew="arch -arm64 brew"
 
 ## --PROMPT-- ##
-PROMPT="%B%K{cyan} %n %k %K{208} in %k %K{yellow}%F{black} %~ %k%f λ%b "
+# https://salferrarello.com/zsh-git-status-prompt/
+autoload -Uz add-zsh-hook
+autoload -Uz add-zsh-hook vcs_info
+setopt prompt_subst
+add-zsh-hook precmd vcs_info
+
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr ' *'
+zstyle ':vcs_info:*' stagedstr ' +'
+zstyle ':vcs_info:git:*' formats       '(%b%u%c)'
+zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
+
+PROMPT='%B%K{cyan} %n %k %K{208} %F{black}in%f %k %1~ %F{red}${vcs_info_msg_0_}%f λ %b'
 
 ## --AUTOSTART-- ##
 fortune | cowsay
@@ -56,13 +63,13 @@ echo ""
 ## VI MODE-- ##
 # https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
 bindkey -v
-export KEYTIMEOUT=1
+export KEYTIMEOUT=0
 
 ## --HISTORY--##
 # https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=$HOME/.cache/zsh/history
+[[ ! $HOME/.cache/zsh ]] && HISTFILE=$HOME/.cache/zsh/history || mkdir -p $HOME/.cache/zsh && HISTFILE=$HOME/.cache/zsh/history
 
 ## --MISC-- ##
 # https://unix.stackexchange.com/questions/391641/separate-path-for-zcompdump-files#391670
@@ -70,5 +77,3 @@ HISTFILE=$HOME/.cache/zsh/history
 autoload -Uz compinit
 compinit -d $HOME/.cache/zsh/zcompdump-$ZSH_VERSION
 
-# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

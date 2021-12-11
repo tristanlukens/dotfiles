@@ -12,18 +12,11 @@
 
 # this script is cross-compatible, meaning it can be used in Linux and macOS
 
-# scripts that are used by these files ARE NOT SYNCED. they are run with a simple source with the $DOTS variable
-
-# $DOTS is declared in .zshrc, but in a bootstrap script, it is not yet. if it does not exists yet, create it here, locally
-if [[ ! $DOTS ]]; then
-    DOTS="$HOME/dotfiles"
-fi
-
+# $DOTS is declared in .zshrc, but in a bootstrap script, it is not there yet. if it does not exists yet, create it here, locally
+if [[ ! $DOTS ]] && DOTS="$HOME/dotfiles"
 # check if .config exists, if it does not, make it
-if [[ ! $HOME/.config ]]; then
-    mkdir $HOME/.config
-fi
-
+if [[ ! $HOME/.config ]] && mkdir $HOME/.config
+    
 # lists in which the orders matter
 FILES=(
 	"$DOTS/zsh/zshenv"
