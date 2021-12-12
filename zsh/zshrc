@@ -8,72 +8,62 @@
 # zshrc by Tristan Lukens
 # tristanlukens.github.io
 
-# Some things that need to be said/done
-# - comments correspond to the command UNDERNEATH
-# - file is cross-compatible (hooray!)
-# - correct this if the dotfiles directory is somewhere else
-export DOTS="$HOME/dotfiles"
+# -------- PREPERATION --------
+    export DOTS="$HOME/dotfiles"
+    OS=$(uname -s)
 
-## --OS SPECIFIC-- ##
-OS=$(uname -s)
-[[ $OS = "Darwin" ]] && export PATH=/opt/homebrew/bin:$PATH
+# -------- MACOS STUFF --------
+    [[ $OS = "Darwin" ]] &&
+        export PATH=/opt/homebrew/bin:$PATH
 
-## --ZINIT-- ##
-# contains everything zinit needs to install if needed and to source the correct files
-source $DOTS/zsh/zinit.zsh
+# -------- ZINIT --------
+    source $DOTS/zsh/zinit.zsh
 
-# https://github.com/jeffreytse/zsh-vi-mode
-zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
+    # https://github.com/jeffreytse/zsh-vi-mode
+    zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
 
-## --ALIASES-- ##
-alias v=nvim
-alias vim=nvim
+# -------- ALIASES --------
+    alias v=nvim
+    alias vim=nvim
+    
+    alias zconf="v $ZDOTDIR/.zshrc && source $ZDOTDIR/.zshrc"
+    alias aconf="v $DOTS/alacritty/alacritty.yml"
+    alias vconf="v $DOTS/nvim/init.vim"
+    
+    alias solitaire="ttysolitaire --no-background-color -p 10"
+    alias la="ls -la"
+    alias t="tree -CaI .git"
+    
+    # alias for brew, because brew wants to install shit to /usr/local when using a rosetta emulated terminal emulator.
+    [[ $(uname -v | grep "ARM64") != "" ]] && alias brew="arch -arm64 brew"
 
-alias zconf="v $ZDOTDIR/.zshrc && clear && source $ZDOTDIR/.zshrc"
-alias aconf="v $DOTS/alacritty/alacritty.yml"
-alias vconf="v $DOTS/nvim/init.vim"
+# -------- PROMPT --------
+    # https://salferrarello.com/zsh-git-status-prompt/
+    autoload -Uz add-zsh-hook
+    autoload -Uz add-zsh-hook vcs_info
+    setopt prompt_subst
+    add-zsh-hook precmd vcs_info
+    
+    zstyle ':vcs_info:*' check-for-changes true
+    zstyle ':vcs_info:*' unstagedstr ' *'
+    zstyle ':vcs_info:*' stagedstr ' +'
+    zstyle ':vcs_info:git:*' formats       '(%b%u%c)'
+    zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
+    PROMPT="%B%K{cyan} %n %k %K{208} %F{black}in%f %k %1~ %F{red}${vcs_info_msg_0_}%f λ %b"
 
-alias solitaire="ttysolitaire --no-background-color -p 10"
-alias la="ls -la"
-alias t="tree -CaI .git"
+# -------- AUTOSTART --------
+    fortune | cowsay
+    # echo an empty line for spacing
+    echo ""
 
-# alias for brew, because brew wants to install shit to /usr/local when using a rosetta emulated terminal emulator.
-[[ $(uname -v | grep "ARM64") != "" ]] && alias brew="arch -arm64 brew"
+# -------- HISTORY --------
+    # https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
+    HISTSIZE=10000
+    SAVEHIST=10000
+    [[ ! $HOME/.cache/zsh ]] && HISTFILE=$HOME/.cache/zsh/history || mkdir -p $HOME/.cache/zsh && HISTFILE=$HOME/.cache/zsh/history
 
-## --PROMPT-- ##
-# https://salferrarello.com/zsh-git-status-prompt/
-autoload -Uz add-zsh-hook
-autoload -Uz add-zsh-hook vcs_info
-setopt prompt_subst
-add-zsh-hook precmd vcs_info
-
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' unstagedstr ' *'
-zstyle ':vcs_info:*' stagedstr ' +'
-zstyle ':vcs_info:git:*' formats       '(%b%u%c)'
-zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
-
-PROMPT='%B%K{cyan} %n %k %K{208} %F{black}in%f %k %1~ %F{red}${vcs_info_msg_0_}%f λ %b'
-
-## --AUTOSTART-- ##
-fortune | cowsay
-# echo an empty line for "margin"
-echo ""
-
-## VI MODE-- ##
-# https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
-bindkey -v
-export KEYTIMEOUT=0
-
-## --HISTORY--##
-# https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
-HISTSIZE=10000
-SAVEHIST=10000
-[[ ! $HOME/.cache/zsh ]] && HISTFILE=$HOME/.cache/zsh/history || mkdir -p $HOME/.cache/zsh && HISTFILE=$HOME/.cache/zsh/history
-
-## --MISC-- ##
-# https://unix.stackexchange.com/questions/391641/separate-path-for-zcompdump-files#391670
-# https://stackoverflow.com/questions/67136714/how-to-properly-call-compinit-and-bashcompinit-in-zsh
-autoload -Uz compinit
-compinit -d $HOME/.cache/zsh/zcompdump-$ZSH_VERSION
-
+# -------- MISC --------
+    # https://unix.stackexchange.com/questions/391641/separate-path-for-zcompdump-files#391670
+    # https://stackoverflow.com/questions/67136714/how-to-properly-call-compinit-and-bashcompinit-in-zsh
+    autoload -Uz compinit
+    compinit -d $HOME/.cache/zsh/zcompdump-$ZSH_VERSION

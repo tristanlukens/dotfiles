@@ -27,9 +27,7 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-## --SOURCING-- ##
+## --sourcing--
 # I do not use .zshrc for anything; my actual zshrc (symlink) is in $HOME/.config/zsh
 # I can safely remove it as long as other programs do not use it
-if [[ ! $HOME/.zshrc ]]; then
-    rm -f $HOME/.zshrc
-fi
+[[ ! $HOME/.zshrc ]] && rm -f $HOME/.zshrc
