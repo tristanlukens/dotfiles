@@ -14,7 +14,8 @@
 
 # -------- MACOS STUFF --------
     [[ $OS = "Darwin" ]] &&
-        export PATH=/opt/homebrew/bin:$PATH
+        export PATH=/opt/homebrew/bin:$PATH &&
+        export PATH=/opt/homebrew/opt/llvm@11/bin:$PATH
 
 # -------- ZINIT --------
     source $DOTS/zsh/zinit.zsh
@@ -51,6 +52,14 @@
     zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
     PROMPT="%B%K{cyan} %n %k %K{208} %F{black}in%f %k %1~ %F{red}${vcs_info_msg_0_}%f λ %b"
 
+# -------- AUTOCOMPLETE ---------
+    # https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52 & https://unix.stackexchange.com/questions/391641/separate-path-for-zcompdump-files#391670
+    autoload -U compinit
+    zstyle ':completion:*' menu select
+    zmodload zsh/complist
+    compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
+    _comp_options+=(globdots)
+
 # -------- AUTOSTART --------
     fortune | cowsay
     # echo an empty line for spacing
@@ -65,5 +74,3 @@
 # -------- MISC --------
     # https://unix.stackexchange.com/questions/391641/separate-path-for-zcompdump-files#391670
     # https://stackoverflow.com/questions/67136714/how-to-properly-call-compinit-and-bashcompinit-in-zsh
-    autoload -Uz compinit
-    compinit -d $HOME/.cache/zsh/zcompdump-$ZSH_VERSION

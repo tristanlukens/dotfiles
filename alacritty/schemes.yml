@@ -1307,4 +1307,4 @@ schemes:
       white:   '0xffffff'
 
 # choose the color scheme here
-colors: *gruvbox_dark
+colors: *ayu_dark
