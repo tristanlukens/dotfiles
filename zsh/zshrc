@@ -8,6 +8,16 @@
 # zshrc by Tristan Lukens
 # tristanlukens.github.io
 
+# -------- SAFETY PRECAUTIONS --------
+    rm () {
+        echo denk eerst ff goed na
+        sleep 3
+        echo "" 
+        echo weet je het zeker\?
+        echo gebruik dan maar \/bin\/rm
+        echo ""
+    }
+
 # -------- PREPERATION --------
     export DOTS="$HOME/dotfiles"
     OS=$(uname -s)
