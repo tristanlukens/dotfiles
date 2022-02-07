@@ -79,7 +79,7 @@ set termguicolors
 let ayucolor="dark"
 
 " settings the theme
-colorscheme ayu
+colorscheme gruvbox
 
 " statusline
 set statusline=
