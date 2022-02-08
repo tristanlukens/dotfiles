@@ -27,7 +27,7 @@ alias t="tree -CaI .git"                                        # tree with colo
 alias solitaire="ttysolitaire --no-background-color -p 10"
 
 # -- PROMPT --
-#PROMPT="%B%K{cyan} %n %k %K{208} %F{black}in%f %k %1~ %F{red}${vcs_info_msg_0_}%f λ %b"    # this one uses git, butI haven't implemented that yet in here
+#PROMPT="%B%K{cyan} %n %k %K{208} %F{black}in%f %k %~ %F{red}${vcs_info_msg_0_}%f λ %b"    # this one uses git, but I haven't implemented that yet in here
 PROMPT="%B%K{cyan} %n %k %K{208} %F{black}in%f %k %~ λ %b"
 
 # -- AUTOCOMPLETE --
@@ -39,14 +39,14 @@ compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 _comp_options+=(globdots)
 
 # -- AUTOSTART ON SHELL OPEN --
-fortune | cowsay
+# fortune | cowsay
+cowsay "You should really ask out Isabel."
 echo   # empty line for spacing
 
 # -- OTHERS --
 HISTFILE=$HOME/.cache/zsh/history   # move the zsh_history file to $HOME/.cache
 
 # -- INSTALLING ZINIT --
-
 # I don't know if this will break when updating, but I have to install it before I can use it to load
 # plugins. The installer does say it needs to be at the bottom, but who knows
 
@@ -64,7 +64,6 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 # -- INSTALLING PLUGINS WITH ZINIT --
-
 # https://github.com/jeffreytse/zsh-vi-mode
 zinit ice depth=1
 zinit light jeffreytse/zsh-vi-mode
