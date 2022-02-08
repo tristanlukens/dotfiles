@@ -1,0 +1,15 @@
+#  _ _       _
+# | (_)_ __ | | _____
+# | | | '_ \| |/ / __|
+# | | | | | |   <\__ \
+# |_|_|_| |_|_|\_\___/
+
+# linking script by Tristan Lukens
+# tristanlukens.github.io
+
+#!/bin/zsh
+
+[[ ! $DOTS ]] && DOTS=$HOME/dotfiles		# $DOTS might exist already; it's declared in zshrc as well. This might not have been run however, when this script should be run
+
+ln -s $DOTS/gitconfig 	$HOME/.gitconfig
+ln -s $DOTS/zshrc 	$HOME/.zshrc
