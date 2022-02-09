@@ -18,7 +18,7 @@ OS=$(uname -s)
     [[ $(uname -v | grep "ARM64") != "" ]] && alias brew="arch -arm64 brew"     # brew is installed somewhere else on ARM macOS
 
 # -- ALIASES --
-alias zconf="v $DOTS/zshrc && source $DOTS/zshrc"
+alias zconf="v $DOTS/zsh/zshrc && source $DOTS/zsh/zshrc"
 alias vconf="v $DOTS/nvim/init.vim"
 alias v="vim"
 alias vim="nvim"
