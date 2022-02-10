@@ -13,26 +13,17 @@
 
 " PLUGINS
 call plug#begin("~/.local/share/nvim/site/plugged")
-    " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
-    " File Explorer
     Plug 'scrooloose/NERDTree'
-    " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
-    " gruvbox theme
     Plug 'gruvbox-community/gruvbox'
-    " ayu theme
     Plug 'ayu-theme/ayu-vim'
-    " coc
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " vim-go
-    Plug 'fatih/vim-go'
 call plug#end()
 
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $HOME/.config/nvim/init.vim
+  autocmd VimEnter * PlugInstall --sync | source $DOTS/nvim/init.lua
 endif
 
 " sourcing coc.vim
