@@ -39,7 +39,7 @@ compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 _comp_options+=(globdots)
 
 # -- AUTOSTART ON SHELL OPEN --
-fortune | cowsay
+fortune -s | cowsay
 echo   # empty line for spacing
 
 # -- OTHERS --
