@@ -20,3 +20,4 @@ set.smartindent    = true
 set.cursorline     = true
 set.wrap           = false
 set.wildmenu       = true
+set.laststatus     = 2

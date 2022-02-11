@@ -13,4 +13,4 @@ vim.cmd("colorscheme gruvbox")
 
 local set = vim.opt
 
-set.statusline = " %f %= %r %F %= [%l of %L] "
+set.statusline = "  %F => %{&filetype} %= [%l of %L]  "
