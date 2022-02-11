@@ -19,7 +19,7 @@ OS=$(uname -s)
 
 # -- ALIASES --
 alias zconf="v $DOTS/zsh/zshrc && source $DOTS/zsh/zshrc"
-alias vconf="v $DOTS/nvim/init.lua"
+alias vconf="v $DOTS/nvim/"
 alias v="vim"
 alias vim="nvim"
 alias la="ls -la"
