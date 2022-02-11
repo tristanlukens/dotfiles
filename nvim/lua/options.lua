@@ -5,7 +5,7 @@
 -- |_| |_|\_/ |_|_| |_| |_|
 --
 
--- nvim options config file by Tristan Lukens
+-- nvim options config by Tristan Lukens
 -- tristanlukens.github.io
 
 local set = vim.opt
