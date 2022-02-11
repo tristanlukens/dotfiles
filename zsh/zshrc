@@ -39,8 +39,7 @@ compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 _comp_options+=(globdots)
 
 # -- AUTOSTART ON SHELL OPEN --
-# fortune | cowsay
-cowsay "You should really ask out Isabel."
+fortune | cowsay
 echo   # empty line for spacing
 
 # -- OTHERS --
