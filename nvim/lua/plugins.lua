@@ -19,4 +19,3 @@ vim.call("plug#begin", "~/.local/share/nvim/site/plugged")
     Plug 'gruvbox-community/gruvbox'
     Plug 'ayu-theme/ayu-vim'
 vim.call("plug#end")
-

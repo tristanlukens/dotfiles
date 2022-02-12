@@ -8,18 +8,14 @@
 -- nvim keybindings config by Tristan Lukens
 -- tristanlukens.github.io
 
-local map = vim.api.nvim_set_keymap
+local map  = vim.api.nvim_set_keymap
+local opts = {noremap = true, silent = true}
 
 -- BUILTINS --
--- using leader key
 vim.g.mapleader = ' '
-
-map("n", "<Leader>w", ":write<CR>", {noremap = true})
-map("n", "<Leader>+", ":vs<CR><C-w>l", {noremap = true})
-
--- using control key
-map("", "<C-k>", ":noh<CR>", {noremap = true})
+map("n", "<Leader>w", ":write<CR>", opts)
+map("n", "<Leader>+", ":vs<CR><C-w>l", opts)
+map("", "<C-k>", ":noh<CR>", opts)
 
 -- PLUGINS --
--- using leader key
-map("n", "<Leader>`", ":NERDTreeToggle<CR>", {noremap = true})
+map("n", "<Leader>`", ":NERDTreeToggle<CR>", opts)
