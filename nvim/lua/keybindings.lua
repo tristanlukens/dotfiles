@@ -18,4 +18,9 @@ map("n", "<Leader>+", ":vs<CR><C-w>l", opts)
 map("", "<C-k>", ":noh<CR>", opts)
 
 -- PLUGINS --
+-- NERDTREE
 map("n", "<Leader>`", ":NERDTreeToggle<CR>", opts)
+
+-- FZF
+map("", "<C-p>", ":Files<CR>", opts)
+

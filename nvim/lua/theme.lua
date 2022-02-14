@@ -9,8 +9,9 @@
 -- tristanlukens.github.io
 
 vim.opt.termguicolors = true
+
+vim.g["gruvbox_contrast_light"] = "hard"
+vim.g["gruvbox_contrast_dark"] = "hard"
 vim.cmd("colorscheme gruvbox")
 
-local set = vim.opt
-
-set.statusline = "  %F => %{&filetype} %= [line %l of %L]  "
+vim.opt.statusline = "  %F => %{&filetype} %= [line %l of %L]  "

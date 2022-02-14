@@ -14,7 +14,8 @@ OS=$(uname -s)
 
 # -- macOS STUFF --
 [[ $OS = "Darwin" ]] &&
-	export PATH=/opt/homebrew/bin:$PATH     # linking brew
+	export PATH=/opt/homebrew/bin:$PATH
+    export PATH=$HOME/.gem/ruby/3.0.0/bin:$PATH
     [[ $(uname -v | grep "ARM64") != "" ]] && alias brew="arch -arm64 brew"     # brew is installed somewhere else on ARM macOS
 
 # -- ALIASES --
@@ -23,7 +24,7 @@ alias vconf="v $DOTS/nvim/"
 alias v="vim"
 alias vim="nvim"
 alias la="ls -la"
-alias t="tree -CaI .git"                                        # tree with colours and hidden files, ignoring .git
+alias t="tree -CaI .git"    # tree with colours and hidden files, ignoring .git
 alias solitaire="ttysolitaire --no-background-color -p 10"
 
 # -- PROMPT --
@@ -42,7 +43,7 @@ _comp_options+=(globdots)
 fortune -s | cowsay
 echo   # empty line for spacing
 
-# -- OTHERS --
+# -- HISTORY --
 HISTFILE=$HOME/.cache/zsh/history   # move the zsh_history file to $HOME/.cache
 
 # -- INSTALLING ZINIT --
@@ -66,3 +67,7 @@ autoload -Uz _zinit
 # https://github.com/jeffreytse/zsh-vi-mode
 zinit ice depth=1
 zinit light jeffreytse/zsh-vi-mode
+
+# -- FZF --
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPS="--extended"
