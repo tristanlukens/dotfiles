@@ -18,21 +18,60 @@ OS=$(uname -s)
     export PATH=$HOME/.gem/ruby/3.0.0/bin:$PATH
     [[ $(uname -v | grep "ARM64") != "" ]] && alias brew="arch -arm64 brew"     # brew is installed somewhere else on ARM macOS
 
-# -- ALIASES --
+# -- ALIASES AND FUNCTIONS --
 alias zconf="v $DOTS/zsh/zshrc && source $DOTS/zsh/zshrc"
-alias vconf="v $DOTS/nvim/"
-alias v="vim"
-alias vim="nvim"
 alias la="ls -la"
-alias t="tree -CaI .git"    # tree with colours and hidden files, ignoring .git
+alias t="tree -CaI .git"
+
 alias solitaire="ttysolitaire --no-background-color -p 10"
+
+# using if statements because I want `vim` to open the current directory, or the first argument if it's there
+vim() {
+    if [[ $# -eq 0 ]]; then
+        nvim .
+    else
+        nvim $1
+    fi
+}
+
+v() {
+    if [[ $# -eq 0 ]]; then
+        vim .
+    else
+        vim $1
+    fi
+}
+
+ef() {
+    local output=$(fzf)
+
+    if [[ ! $output == "\n" ]]; then
+        vim $output
+    else
+        echo "Input file required; exited"
+    fi
+}
+
+conf() {
+    old=$(pwd)
+    cd $DOTS
+
+    local output=$(fzf)
+
+    if [[ -n $output ]]; then
+        vim $output
+    else
+        echo "Input file required; exited"
+    fi
+
+    cd $old
+}
 
 # -- PROMPT --
 #PROMPT="%B%K{cyan} %n %k %K{208} %F{black}in%f %k %~ %F{red}${vcs_info_msg_0_}%f λ %b"    # this one uses git, but I haven't implemented that yet in here
 PROMPT="%B%K{cyan} %n %k %K{208} %F{black}in%f %k %~ λ %b"
 
 # -- AUTOCOMPLETE --
-# https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52 & https://unix.stackexchange.com/questions/391641/separate-path-for-zcompdump-files#391670
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -70,4 +109,6 @@ zinit light jeffreytse/zsh-vi-mode
 
 # -- FZF --
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPS="--extended"
+
+export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build} --type f"
+export FZF_DEFAULT_OPTS="--height 80% --layout=reverse --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
