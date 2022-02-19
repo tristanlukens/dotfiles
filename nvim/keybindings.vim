@@ -11,12 +11,17 @@
 " -- GENERAL REMAPS --
 let mapleader = " "
 
-nnoremap <Leader>w :write<CR>
-nnoremap <C-k> :noh<CR>
+nnoremap <silent> <Leader>w :write<CR>
+nnoremap <silent> <C-k> :noh<CR>
+
+nnoremap <silent> <M-up> :resize -1<CR>
+nnoremap <silent> <M-down> :resize +1<CR>
+nnoremap <silent> <M-left> <C-w><
+nnoremap <silent> <M-right> <C-w>>
 
 " -- PLUGIN MAPPINGS --
 " NERDTree
-nnoremap <Leader>` :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>` :NERDTreeToggle<CR>
 
 " FZF
-noremap <C-p> :Files<CR>
+noremap <silent> <C-p> :Files<CR>
