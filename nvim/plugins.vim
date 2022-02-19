@@ -20,7 +20,10 @@ call plug#begin()
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'junegunn/fzf'
     Plug 'junegunn/fzf.vim'
+    Plug 'kevinoid/vim-jsonc'
 call plug#end()
 
 " -- SOURCING CONFIG FILES --
 source $DOTS/nvim/plugins/coc.vim
+source $DOTS/nvim/plugins/nerdtree.vim
+
