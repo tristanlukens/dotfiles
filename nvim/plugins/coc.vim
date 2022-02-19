@@ -8,22 +8,23 @@
 " nvim coc config by Tristan Lukens
 " tristanlukens.github.io
 
+" -- SERVERS --
+let g:coc_global_extensions = [
+    \ 'coc-tsserver',
+    \ 'coc-css',
+    \ 'coc-json',
+    \ 'coc-emmet',
+    \ 'coc-tailwindcss',
+    \ 'coc-eslint',
+    \ 'coc-prettier'
+    \ ]
+
 " this is all copy-pasted from coc's readme
 " TODO: remove what I don't need
-
-" Set internal encoding of vim, not needed on neovim, since coc.nvim using some
-" unicode characters in the file autoload/float.vim
-set encoding=utf-8
-
-" TextEdit might fail if hidden is not set.
-set hidden
 
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
-
-" Give more space for displaying messages.
-set cmdheight=2
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
