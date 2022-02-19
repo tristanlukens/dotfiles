@@ -1,0 +1,17 @@
+{
+  "eslint.autoFixOnSave": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    // all prettier-supported filetypes I use
+    "html",
+    "css",
+    "scss",
+    "sass",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "markdown",
+    "json",
+    "jsonc"
+  ]
+}
