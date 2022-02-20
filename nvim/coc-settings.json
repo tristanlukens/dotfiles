@@ -1,5 +1,8 @@
 {
+  // eslint
   "eslint.autoFixOnSave": true,
+  // prettier
+  "prettier.requireConfig": true,
   "coc.preferences.formatOnSaveFiletypes": [
     // all prettier-supported filetypes I use
     "html",
@@ -13,5 +16,6 @@
     "markdown",
     "json",
     "jsonc"
-  ]
+  ],
+  "svelte.enable-ts-plugin": true
 }
