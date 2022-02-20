@@ -72258,7 +72258,7 @@
 			<key>Normal Font</key>
 			<string>Lilex-Regular 12</string>
 			<key>Option Key Sends</key>
-			<integer>1</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Changeable</key>
