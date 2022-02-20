@@ -13,4 +13,4 @@
 
 ln -s $DOTS/gitconfig $HOME/.gitconfig
 ln -s $DOTS/zsh/zshrc $HOME/.zshrc
-ln -s $DOTS/tmux.conf $HOME/.tmux.conf
+ln -s $DOTS/tmux/tmux.conf $HOME/.tmux.conf
