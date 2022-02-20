@@ -21,9 +21,10 @@ call plug#begin()
     Plug 'junegunn/fzf'
     Plug 'junegunn/fzf.vim'
     Plug 'kevinoid/vim-jsonc'
+    Plug 'codechips/coc-svelte', {'do': 'npm install'} " its dependencies are more up-to-date than when installing it via CocInstall or g:coc_global_extensions
 call plug#end()
 
 " -- SOURCING CONFIG FILES --
 source $DOTS/nvim/plugins/coc.vim
 source $DOTS/nvim/plugins/nerdtree.vim
-
+source $DOTS/nvim/plugins/treesitter.vim
