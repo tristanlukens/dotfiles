@@ -8,6 +8,7 @@
 # tristanlukens.github.io
 
 alias zconf="v $DOTS/zsh/zshrc && source $DOTS/zsh/zshrc"
+alias vconf="v $DOTS/nvim/init.vim"
 alias la="ls -la"
 alias t="tree -CaI .git"
 
