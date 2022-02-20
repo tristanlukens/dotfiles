@@ -8,11 +8,10 @@
 # tristanlukens.github.io
 
 alias la="ls -la"
-alias t="tree -CaI .git"
+alias t="tree -CaI .git -I node_modules"
 
 alias solitaire="ttysolitaire --no-background-color -p 10"
 
-# using if statements because I want `vim` to open the current directory, or the first argument if it's there
 vim() {
     if [[ $# -eq 0 ]]; then
         nvim .
@@ -32,10 +31,10 @@ v() {
 ef() {
     local output=$(fzf)
 
-    if [[ ! $output == "\n" ]]; then
+    if [[ -n $output ]]; then
         vim $output
     else
-        echo "Input file required; exited"
+        echo "No input file specified; exited"
     fi
 }
 
@@ -48,7 +47,7 @@ conf() {
     if [[ -n $output ]]; then
         vim $output
     else
-        echo "Input file required; exited"
+        echo "No input file specified; exited"
     fi
 
     cd $old
