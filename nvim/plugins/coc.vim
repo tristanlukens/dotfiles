@@ -9,6 +9,10 @@
 " tristanlukens.github.io
 
 " -- SERVERS --
+" coc-svelte was installed with vim-plug, since the coc's version's
+" dependencies are outdated
+"
+" tailwindcss doesn't work at the time of writing (20 feb)
 let g:coc_global_extensions = [
     \ 'coc-tsserver',
     \ 'coc-css',
