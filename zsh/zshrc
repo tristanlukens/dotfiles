@@ -8,107 +8,15 @@
 # zshrc by Tristan Lukens
 # tristanlukens.github.io
 
-# -- PREP --
 export DOTS="$HOME/dotfiles"    # change if dotfiles are installed somewhere else
 OS=$(uname -s)
 
-# -- macOS STUFF --
-[[ $OS = "Darwin" ]] &&
-	export PATH=/opt/homebrew/bin:$PATH
-    export PATH=$HOME/.gem/ruby/3.0.0/bin:$PATH
-    [[ $(uname -v | grep "ARM64") != "" ]] && alias brew="arch -arm64 brew"     # brew is installed somewhere else on ARM macOS
+[[ $OS = "Darwin" ]] && source $DOTS/zsh/macOS.zsh
 
-# -- ALIASES AND FUNCTIONS --
-alias zconf="v $DOTS/zsh/zshrc && source $DOTS/zsh/zshrc"
-alias la="ls -la"
-alias t="tree -CaI .git"
-
-alias solitaire="ttysolitaire --no-background-color -p 10"
-
-# using if statements because I want `vim` to open the current directory, or the first argument if it's there
-vim() {
-    if [[ $# -eq 0 ]]; then
-        nvim .
-    else
-        nvim $1
-    fi
-}
-
-v() {
-    if [[ $# -eq 0 ]]; then
-        vim .
-    else
-        vim $1
-    fi
-}
-
-ef() {
-    local output=$(fzf)
-
-    if [[ ! $output == "\n" ]]; then
-        vim $output
-    else
-        echo "Input file required; exited"
-    fi
-}
-
-conf() {
-    old=$(pwd)
-    cd $DOTS
-
-    local output=$(fzf)
-
-    if [[ -n $output ]]; then
-        vim $output
-    else
-        echo "Input file required; exited"
-    fi
-
-    cd $old
-}
-
-# -- PROMPT --
-#PROMPT="%B%K{cyan} %n %k %K{208} %F{black}in%f %k %~ %F{red}${vcs_info_msg_0_}%f λ %b"    # this one uses git, but I haven't implemented that yet in here
-PROMPT="%B%K{cyan} %n %k %K{208} %F{black}in%f %k %~ λ %b"
-
-# -- AUTOCOMPLETE --
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
-_comp_options+=(globdots)
-
-# -- AUTOSTART ON SHELL OPEN --
-fortune -s | cowsay
-echo   # empty line for spacing
-
-# -- HISTORY --
-HISTFILE=$HOME/.cache/zsh/history   # move the zsh_history file to $HOME/.cache
-
-# -- INSTALLING ZINIT --
-# I don't know if this will break when updating, but I have to install it before I can use it to load
-# plugins. The installer does say it needs to be at the bottom, but who knows
-
-### Added by Zinit's installer
-if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
-    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
-    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
-    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
-        print -P "%F{33} %F{34}Installation successful.%f%b" || \
-        print -P "%F{160} The clone has failed.%f%b"
-fi
-
-source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-
-# -- INSTALLING PLUGINS WITH ZINIT --
-# https://github.com/jeffreytse/zsh-vi-mode
-zinit ice depth=1
-zinit light jeffreytse/zsh-vi-mode
-
-# -- FZF --
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build} --type f"
-export FZF_DEFAULT_OPTS="--height 80% --layout=reverse --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+source $DOTS/zsh/aliases.zsh
+source $DOTS/zsh/prompt.zsh
+source $DOTS/zsh/autostart.zsh
+source $DOTS/zsh/completion.zsh
+source $DOTS/zsh/history.zsh
+source $DOTS/zsh/plugins.zsh
+source $DOTS/zsh/plugins/**
