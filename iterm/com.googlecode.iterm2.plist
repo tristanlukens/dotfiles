@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AllowClipboardAccess</key>
+	<true/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>BadgeRightMargin</key>
@@ -71919,6 +71921,8 @@
 			<string>Default</string>
 			<key>Disable Window Resizing</key>
 			<true/>
+			<key>Draw Powerline Glyphs</key>
+			<false/>
 			<key>Flashing Bell</key>
 			<false/>
 			<key>Foreground Color</key>
@@ -72254,8 +72258,10 @@
 			<key>Normal Font</key>
 			<string>Lilex-Regular 12</string>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>Prompt Before Closing 2</key>
+			<false/>
+			<key>Right Option Key Changeable</key>
 			<false/>
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
