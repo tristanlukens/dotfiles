@@ -11,5 +11,6 @@
 
 [[ ! $DOTS ]] && DOTS=$HOME/dotfiles		# $DOTS might exist already; it's declared in zshrc as well. This might not have been run however, when this script should be run
 
-ln -s $DOTS/gitconfig 	$HOME/.gitconfig
-ln -s $DOTS/zsh/zshrc  	$HOME/.zshrc
+ln -s $DOTS/gitconfig $HOME/.gitconfig
+ln -s $DOTS/zsh/zshrc $HOME/.zshrc
+ln -s $DOTS/tmux.conf $HOME/.tmux.conf

@@ -16,5 +16,6 @@ My dotfiles.
 - zsh
 - nvim
 - git
+- tmux
 
 There's individual READMEs for iterm, zsh and nvim. Git doesn't need much explaining.
