@@ -25,7 +25,5 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 # -- INSTALLING ZINIT PLUGINS --
-
-# https://github.com/jeffreytse/zsh-vi-mode
-zinit ice depth=1
-zinit light jeffreytse/zsh-vi-mode
+zinit ice depth=1   # I have no idea of what ice does
+zinit light softmoth/zsh-vim-mode
