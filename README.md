@@ -18,4 +18,4 @@ My dotfiles.
 - git
 - tmux
 
-There's individual READMEs for iterm, zsh and nvim. Git doesn't need much explaining, but it does have its own folder.
+There's individual READMEs everything but git, since it doesn't need much explaining It does however have its own folder.
