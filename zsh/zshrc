@@ -18,5 +18,10 @@ source $DOTS/zsh/prompt.zsh
 source $DOTS/zsh/autostart.zsh
 source $DOTS/zsh/completion.zsh
 source $DOTS/zsh/history.zsh
+
 source $DOTS/zsh/plugins.zsh
-source $DOTS/zsh/plugins/**
+source $DOTS/zsh/plugins/zsh-vim-mode.zsh
+
+source $DOTS/zsh/program-conf/bat.zsh
+source $DOTS/zsh/program-conf/fzf.zsh
+
