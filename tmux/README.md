@@ -9,4 +9,4 @@ I wanted to use [this](https://github.com/LawAbidingCactus/tmux-gruvbox-truecolo
 ## Todo
 
 - [ ] check if tmux still generates log files. if it does, fix it by making them go to another directory
-- [ ] see Status Bar; solve bug of gruvbox theme which has to do with the cursor
+- [ ] move plugins to a seperate file. I couldn't get it to work
