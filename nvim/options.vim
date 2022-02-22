@@ -32,3 +32,8 @@ set termguicolors
 set hidden
 set cmdheight=2
 set signcolumn=yes
+
+set nobackup
+set nowritebackup
+
+set updatetime=300
