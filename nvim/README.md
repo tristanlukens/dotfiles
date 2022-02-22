@@ -57,3 +57,5 @@ In no particular order.
 - [ ] set things up for c development
 - [ ] get a theme switcher
 - [ ] the functions in keybindings.vim should be in coc.vim, but I couldn't get them to work
+- [ ] git integration
+- [ ] adding more fzf function keybindings
