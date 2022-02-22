@@ -7,6 +7,7 @@
 # zsh alias and function config by Tristan Lukens
 # tristanlukens.github.io
 
+alias reload="source $DOTS/zsh/zshrc"
 alias la="ls -la"
 alias t="tree -Cax"
 alias tr="tree -CaI .git -I node_modules"
