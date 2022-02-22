@@ -8,12 +8,13 @@
 # tristanlukens.github.io
 
 alias la="ls -la"
-alias t="tree -CaI .git -I node_modules"
+alias t="tree -Cax"
+alias tr="tree -CaI .git -I node_modules"
 
 alias solitaire="ttysolitaire --no-background-color -p 10"
 
 ct() {
-  cd $1 && tree -Cax
+  cd $1 && t
 }
 
 vim() {
