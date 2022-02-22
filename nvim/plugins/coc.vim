@@ -13,17 +13,17 @@
 
 " tailwindcss doesn't work at the time of writing (20 feb)
 let g:coc_global_extensions = [
-    \ 'coc-tsserver',
-    \ 'coc-css',
-    \ 'coc-json',
-    \ 'coc-emmet',
-    \ 'coc-tailwindcss',
-    \ 'coc-eslint',
-    \ 'coc-prettier',
-    \ 'coc-go'
-    \ ]
+  \ 'coc-tsserver',
+  \ 'coc-css',
+  \ 'coc-json',
+  \ 'coc-emmet',
+  \ 'coc-tailwindcss',
+  \ 'coc-eslint',
+  \ 'coc-prettier',
+  \ 'coc-go'
+  \ ]
 
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
+command! -nargs=? Fold :call CocAction('fold', <f-args>)
+command! -nargs=0 OR   :call CocActionAsync('runCommand', 'editor.action.organizeImport')
 
 autocmd CursorHold * silent call CocActionAsync('highlight')

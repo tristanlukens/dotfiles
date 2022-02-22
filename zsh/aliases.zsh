@@ -12,43 +12,47 @@ alias t="tree -CaI .git -I node_modules"
 
 alias solitaire="ttysolitaire --no-background-color -p 10"
 
+cl() {
+  cd $1 && la
+}
+
 vim() {
-    if [[ $# -eq 0 ]]; then
-        nvim .
-    else
-        nvim $1
-    fi
+  if [[ $# -eq 0 ]]; then
+      nvim .
+  else
+      nvim $1
+  fi
 }
 
 v() {
-    if [[ $# -eq 0 ]]; then
-        vim .
-    else
-        vim $1
-    fi
+  if [[ $# -eq 0 ]]; then
+      vim .
+  else
+      vim $1
+  fi
 }
 
 ef() {
-    local output=$(fzf)
+  local output=$(fzf)
 
-    if [[ -n $output ]]; then
-        vim $output
-    else
-        echo "No input file specified; exited"
-    fi
+  if [[ -n $output ]]; then
+      vim $output
+  else
+      echo "No input file specified; exited"
+  fi
 }
 
 conf() {
-    old=$(pwd)
-    cd $DOTS
+  old=$(pwd)
+  cd $DOTS
 
-    local output=$(fzf)
+  local output=$(fzf)
 
-    if [[ -n $output ]]; then
-        vim $output
-    else
-        echo "No input file specified; exited"
-    fi
+  if [[ -n $output ]]; then
+      vim $output
+  else
+      echo "No input file specified; exited"
+  fi
 
-    cd $old
+  cd $old
 }
