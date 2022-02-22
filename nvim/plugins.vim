@@ -12,6 +12,7 @@
 " per-plugin is done in the $DOTS/nvim/plugins/ directory, but these will be
 " sourced here
 
+" coc-svelte dependencies are more up-to-date than when installing it via CocInstall or g:coc_global_extensions
 call plug#begin()
     Plug 'morhetz/gruvbox'
     Plug 'scrooloose/nerdtree'
@@ -21,10 +22,12 @@ call plug#begin()
     Plug 'junegunn/fzf'
     Plug 'junegunn/fzf.vim'
     Plug 'kevinoid/vim-jsonc'
-    Plug 'codechips/coc-svelte', {'do': 'npm install'} " its dependencies are more up-to-date than when installing it via CocInstall or g:coc_global_extensions
+    Plug 'codechips/coc-svelte', {'do': 'npm install'} 
+    Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 call plug#end()
 
 " -- SOURCING CONFIG FILES --
 source $DOTS/nvim/plugins/coc.vim
 source $DOTS/nvim/plugins/nerdtree.vim
 source $DOTS/nvim/plugins/treesitter.vim
+source $DOTS/nvim/plugins/vim-go.vim
