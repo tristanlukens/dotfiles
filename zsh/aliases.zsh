@@ -12,8 +12,8 @@ alias t="tree -CaI .git -I node_modules"
 
 alias solitaire="ttysolitaire --no-background-color -p 10"
 
-cl() {
-  cd $1 && la
+ct() {
+  cd $1 && tree -Cax
 }
 
 vim() {
