@@ -5,7 +5,9 @@
 " |_| |_|\_/ |_|_| |_| |_|
 "
 
-" nvim nerdtree plugin config by Tristan Lukens
+" nvim vim-go plugin config by Tristan Lukens
 " tristanlukens.github.io
 
-let NERDTreeShowHidden=1
+" https://www.youtube.com/watch?v=T32yqetyy8s&t=588s
+
+let g:go_def_mapping_enabled = 0

@@ -5,7 +5,7 @@
 " |_| |_|\_/ |_|_| |_| |_|
 "
 
-" nvim treesitter config by Tristan Lukens
+" nvim treesitter plugin config by Tristan Lukens
 " tristanlukens.github.io
 
 " copy-pasted from nvim-treesitter's readme then edited
