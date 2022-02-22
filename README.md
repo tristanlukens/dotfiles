@@ -17,5 +17,6 @@ My dotfiles.
 - nvim
 - git
 - tmux
+- setup scripts
 
 There's individual READMEs everything but git, since it doesn't need much explaining It does however have its own folder.
