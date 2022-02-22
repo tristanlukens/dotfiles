@@ -1,32 +1,21 @@
 {
-  // format on save
-  "coc.preferences.formatOnSaveFiletypes": [
-    "css",
-    "javascript",
-    "graphql",
-    "html",
-    "yaml",
-    "json",
-    "python"
-  ],
-
+  // eslint
+  "eslint.autoFixOnSave": true,
   // prettier
-  "prettier.useTabs": true,
-  "prettier.tabWidth": 4,
-
-  // go
-  "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": [
-        "go.mod",
-        ".vim/",
-        ".git/",
-        ".hg/"
-      ],
-      "filetypes": [
-        "go"
-      ]
-    }
-  }
+  "prettier.requireConfig": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    // all prettier-supported filetypes I use
+    "html",
+    "css",
+    "scss",
+    "sass",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "markdown",
+    "json",
+    "jsonc"
+  ],
+  "svelte.enable-ts-plugin": true
 }

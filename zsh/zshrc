@@ -1,0 +1,27 @@
+#          _
+#  _______| |__  _ __ ___
+# |_  / __| '_ \| '__/ __|
+#  / /\__ \ | | | | | (__
+# /___|___/_| |_|_|  \___|
+#
+
+# zshrc by Tristan Lukens
+# tristanlukens.github.io
+
+export DOTS="$HOME/dotfiles"    # change if dotfiles are installed somewhere else
+OS=$(uname -s)
+
+[[ $OS = "Darwin" ]] && source $DOTS/zsh/macOS.zsh
+
+source $DOTS/zsh/aliases.zsh
+source $DOTS/zsh/prompt.zsh
+source $DOTS/zsh/autostart.zsh
+source $DOTS/zsh/completion.zsh
+source $DOTS/zsh/history.zsh
+
+source $DOTS/zsh/plugins.zsh
+source $DOTS/zsh/plugins/zsh-vim-mode.zsh
+
+source $DOTS/zsh/program-conf/bat.zsh
+source $DOTS/zsh/program-conf/fzf.zsh
+

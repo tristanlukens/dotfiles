@@ -89,6 +89,7 @@ Apps to be installed via the App Store if not installed with `brew`:
 I only install a couple of fonts, and all of the following fonts are on [Google Fonts](https://fonts.google.com).
 
 - Roboto Mono
+- Inter
 - DM Mono
 - Poppins
 - Montserrat
@@ -102,12 +103,6 @@ In addition, I do use some other fonts, which are not on Google Fonts.
 - [Mohave](https://www.1001fonts.com/mohave-font.html)
 - [SF + New York Fonts](https://developer.apple.com/fonts/) (macOS only, installed with .dmg)
 - [Lilex](https://github.com/mishamyrt/Lilex)
-
-
-
-## Tinkertool
-
-For some preferences I like to use, you need Tinkertool. It is not in brew though, so install it via their website.
 
 
 
@@ -162,7 +157,7 @@ Show volume in menu bar: **ticked**
 
 #### Printers & Scanners
 
-Add these if neede
+Add these if needed
 
 #### Keyboard
 

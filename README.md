@@ -1,36 +1,21 @@
+```text
+     _       _    __ _ _
+  __| | ___ | |_ / _(_) | ___  ___
+ / _` |/ _ \| __| |_| | |/ _ \/ __|
+| (_| | (_) | |_|  _| | |  __/\__ \
+ \__,_|\___/ \__|_| |_|_|\___||___/
+```
+
 # dotfiles
-**my dotfiles**
 
+My dotfiles.
 
+## What's in here
 
-## notes
-To make EVERYTING work exactly how I want it, you need the SF fonts (by apple, so not for linux). I will probably fix
-this by moving to another font entirely.
+- iterm
+- zsh
+- nvim
+- git
+- tmux
 
-I tried to set up vim for go but this is not finished yet, so things aren't working
-
-
-## items
-- vim/neovim config
-- zshrc
-- gitconfig
-- alacritty
-
-
-
-## todo
-- rewrite this readme
-- set up nvim for go and c(++)
-- when cd is used in terminal, execute la (an alias itself for ls -la) too
-
-
-### long-term todos
-- move to LSP for autocomplete instead of coc
-- write seperate shell scripts for setting up different things on a computer; macOS settings, dotfiles, npm, go, etc. this way, it will be modular and cross-platform.
-- write setup.md if needed for each thing to be set up
-
-- MOVE TO LINUX ALREADY
-
-
-
-:octocat:
+There's individual READMEs everything but git, since it doesn't need much explaining It does however have its own folder.
