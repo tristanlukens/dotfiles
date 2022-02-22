@@ -42,6 +42,7 @@ bi ruby
 bi go
 bi rust
 bi node
+bi deno
 bi pfetch
 bi tree
 bi tty-clock
