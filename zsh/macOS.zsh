@@ -9,4 +9,4 @@
 
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=$HOME/.gem/ruby/3.0.0/bin:$PATH
-[[ $(uname -v | grep "ARM64") != "" ]] && alias brew="arch -arm64 brew"     # brew is installed somewhere else on ARM macOS
+[[ $(brew --prefix) == "/opt/homebrew" ]] && alias brew="arch -arm64 brew"     # brew is installed somewhere else on ARM macOS
