@@ -22,6 +22,6 @@ source $DOTS/zsh/history.zsh
 source $DOTS/zsh/plugins.zsh
 source $DOTS/zsh/plugins/zsh-vim-mode.zsh
 
-source $DOTS/zsh/program-conf/bat.zsh
-source $DOTS/zsh/program-conf/fzf.zsh
+source $DOTS/program-conf/bat.zsh
+source $DOTS/program-conf/fzf.zsh
 

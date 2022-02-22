@@ -71947,7 +71947,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string></string>
+			<string>tmux attach || tmux new -s main</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
