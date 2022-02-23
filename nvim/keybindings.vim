@@ -14,6 +14,8 @@ let mapleader = " "
 nnoremap <silent> <Leader>w :write<CR>
 noremap <silent> <C-k> :noh<CR>
 
+nnoremap <silent> <Leader>r :e<CR>
+
 nnoremap <silent> <M-up> :resize -1<CR>
 nnoremap <silent> <M-down> :resize +1<CR>
 nnoremap <silent> <M-left> <C-w><
