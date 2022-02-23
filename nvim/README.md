@@ -35,7 +35,7 @@ You also need a `.elintrc.json` config file, with at least the following content
 }
 ```
 
-It is recommended to add your own rules here.
+It is recommended to add your own rules here. If you want to add TypeScript rules, specify them with `@typescript/eslint`. Getting rid of the [explicit any rule](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-explicit-any.md) you would use `@typescript-eslint/no-explicit-any: "off"`.
 
 Prettier works without any packages on its own, but you do need a `.prettierrc.json` config file. To have good ESLint Prettier integration, put `"plugin:prettier/recommended"` inside of the "extends" array in your `.eslintrc.json`. Don't forhet the comma after the other element before in the config file. If you're file with the default Prettier options, just put and empty json object (`{}`) in there. Otherwise, customise it.
 
