@@ -13,7 +13,7 @@
 # IMPORTANT: THIS SCRIPT HAS NOT BEEN TESTED AT THE TIME OF WRITING
 
 # -- INSTALLATION --
-if [[ $(uname -s) = "Darwin" ]] && xcode-select --install
+[[ $(uname -s) = "Darwin" ]] && xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # -- PREP --
