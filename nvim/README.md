@@ -37,7 +37,9 @@ You also need a `.elintrc.json` config file, with at least the following content
 
 It is recommended to add your own rules here.
 
-Prettier works without any packages, but you do need a `.prettierrc.json` config file. To have good ESLint Prettier integration, put `"plugin:prettier/recommended"` inside of the "extends" array in your `.eslintrc.json`. Don't forhet the comma after the other element before in the config file. If you're file with the default Prettier options, just put and empty json object (`{}`) in there. Otherwise, customise it.
+Prettier works without any packages on its own, but you do need a `.prettierrc.json` config file. To have good ESLint Prettier integration, put `"plugin:prettier/recommended"` inside of the "extends" array in your `.eslintrc.json`. Don't forhet the comma after the other element before in the config file. If you're file with the default Prettier options, just put and empty json object (`{}`) in there. Otherwise, customise it.
+
+To make Prettier work together with ESLint, run the following command to install extra packages: `npm i -D prettier eslint-config-prettier eslint-plugin-prettier`.
 
 My default config is the following (yes, I like the defaults).
 
