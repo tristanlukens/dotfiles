@@ -18,4 +18,6 @@
 ./links.bash      || echo "links script failed; exited" && exit
 ./wallpapers.bash || echo "wallpapers script failed; exited" && exit
 
+touch $HOME/.hushlogin
+
 echo "Success! There's still things to do though; following the post-setup steps in the README."
