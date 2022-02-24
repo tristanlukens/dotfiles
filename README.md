@@ -21,6 +21,12 @@ My dotfiles.
 
 There's individual READMEs everything but git, since it doesn't need much explaining It does however have its own folder.
 
+I sync my Visual Studio Code settings with the [settings sync extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) (not the built-in feature!).
+
+## General Todos
+
+- [ ] create a script for moving themes to ayu. for everything. I like it better than gruvbox
+
 ## Post-setup steps
 
 After you've set up your installation with `$DOTS/setup-scripts/setup.bash`, you should do the following to be done with the setup of your system.
