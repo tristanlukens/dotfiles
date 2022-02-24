@@ -15,6 +15,7 @@
 " coc-svelte dependencies are more up-to-date than when installing it via CocInstall or g:coc_global_extensions
 call plug#begin()
   Plug 'morhetz/gruvbox'
+  Plug 'ayu-theme/ayu-vim'
   Plug 'scrooloose/nerdtree'
   Plug 'jiangmiao/auto-pairs'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
