@@ -51,11 +51,13 @@ bi yt-dlp
 # -- CASKS --
 bi rectangle
 bi brewlet
+bi visual-studio-code
 bi spotify
 bi firefox
+bi curseforge
+bi minecraft
 bi amethyst
 bi keycastr
-bi minecraft
 bi kitty
 bi barrier
 bi spotter
