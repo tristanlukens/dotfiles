@@ -12,6 +12,8 @@ alias la="ls -la"
 alias t="tree -Cax"
 alias tr="tree -CaI .git -I node_modules"
 
+alias showpath="print -l $path | bat"
+
 alias solitaire="ttysolitaire --no-background-color -p 10"
 
 ct() {
