@@ -7,6 +7,7 @@
 # zsh macOS config by Tristan Lukens
 # tristanlukens.github.io
 
-export PATH=/opt/homebrew/bin:$PATH
-export PATH=$HOME/.gem/ruby/3.0.0/bin:$PATH
-[[ $(brew --prefix) == "/opt/homebrew" ]] && alias brew="arch -arm64 brew"     # brew is installed somewhere else on ARM macOS
+export BREW_PREFIX="/opt/homebrew"
+export PATH=$BREW_PREFIX/bin:$PATH
+
+[[ $BREW_PREFIX == "/opt/homebrew" ]] && alias brew="arch -arm64 brew"  # brew is installed in /opt/homebrew instead of /usr/local on ARM macOS. This can cause problems with x86 terminal emulaters using rosetta
