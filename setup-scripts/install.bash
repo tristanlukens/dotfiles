@@ -125,3 +125,5 @@ rbenv global 3.1.1
 # packages
 gem install --user-install jekyll
 gem install --user-install bundler
+gem install --user-install rufo
+gem install --user-install rubocop
