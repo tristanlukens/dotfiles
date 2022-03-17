@@ -82,6 +82,7 @@ brew install --cask font-roboto
 brew install --cask font-roboto-slab
 brew install --cask font-inter
 brew install --cask font-lora
+brew install --cask font-crimson-pro
 
 # final
 PATH="$BREW_PREFIX/bin:$PATH"  # This is needed for npm to work correctly. This same thing in zshrc, but that's not been run here.
