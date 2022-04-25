@@ -15,7 +15,7 @@ OS=$(uname -s)
 
 source $DOTS/zsh/aliases.zsh
 source $DOTS/zsh/prompt.zsh
-source $DOTS/zsh/autostart.zsh
+# source $DOTS/zsh/autostart.zsh # too slow
 source $DOTS/zsh/completion.zsh
 source $DOTS/zsh/history.zsh
 
