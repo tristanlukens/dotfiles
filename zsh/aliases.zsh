@@ -47,16 +47,10 @@ ef() {
 }
 
 conf() {
-  old=$(pwd)
+  local old=$(pwd)
   cd $DOTS
 
-  local output=$(fzf)
-
-  if [[ -n $output ]]; then
-      vim $output
-  else
-      echo "No input file specified; exited"
-  fi
+  ef
 
   cd $old
 }
