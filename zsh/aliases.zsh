@@ -8,7 +8,7 @@
 # tristanlukens.github.io
 
 alias reload="source $DOTS/zsh/zshrc"
-alias la="ls -la"
+alias la="ls -la --color"
 alias t="tree -Cax"
 alias tr="tree -CaI .git -I node_modules"
 
