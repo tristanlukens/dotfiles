@@ -7,11 +7,7 @@
 # zsh plugins config by Tristan Lukens
 # tristanlukens.github.io
 
-# -- INSTALLING ZINIT --
-# I don't know if this will break when updating, but I have to install it before I can use it to load
-# plugins. The installer does say it needs to be at the bottom, but who knows
-
-### Added by Zinit's installer
+# zinit installation
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
   print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
   command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
@@ -24,6 +20,6 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-# -- INSTALLING ZINIT PLUGINS --
-zinit ice depth=1   # I have no idea of what ice does
+# installing plugins
+zinit ice depth=1
 zinit light softmoth/zsh-vim-mode

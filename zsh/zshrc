@@ -8,25 +8,35 @@
 # zshrc by Tristan Lukens
 # tristanlukens.github.io
 
+# some settings are located in other files because they take up quite a lot of space
+
 export DOTS="$HOME/dotfiles"    # change if dotfiles are installed somewhere else
 OS=$(uname -s)
 
+# macOS-specific things
 [[ $OS = "Darwin" ]] && source $DOTS/zsh/macOS.zsh
 
+# things that would otherwise take up too much space
 source $DOTS/zsh/aliases.zsh
-source $DOTS/zsh/prompt.zsh
-source $DOTS/zsh/completion.zsh
-source $DOTS/zsh/history.zsh
-
 source $DOTS/zsh/plugins.zsh
-source $DOTS/zsh/plugins/zsh-vim-mode.zsh
+source $DOTS/zsh/plugins/*.zsh
 
-source $DOTS/program-conf/bat.zsh
-source $DOTS/program-conf/fzf.zsh
+# prompt
+PROMPT="%B%K{cyan} %~ %k%b -> "
 
-source $DOTS/setup-scripts/rbenv.bash
+# history
+HISTFILE=$HOME/.cache/zsh/history
+
+# completion
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit -d ~/.cache/zsh/zcompdump-$zsh_version
+_comp_options+=(globdots)
+
+# sourcing folders/scripts
+source $DOTS/zsh/program-conf/*.zsh
 
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
-
-[ -f "/Users/tristanlukens/.ghcup/env" ] && source "/Users/tristanlukens/.ghcup/env" # ghcup-env
+[ -f "/Users/tristanlukens/.ghcup/env" ] && source "/Users/tristanlukens/.ghcup/env"
