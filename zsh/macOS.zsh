@@ -12,6 +12,8 @@
 # which shoudn't be possible on arm but well... When I run brew --prefix now, it spits back usr/local
 export BREW_PREFIX="/opt/homebrew"
 export PATH=$BREW_PREFIX/bin:$PATH
+
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 [[ $BREW_PREFIX == "/opt/homebrew" ]] && alias brew="arch -arm64 brew"

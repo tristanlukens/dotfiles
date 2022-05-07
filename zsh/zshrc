@@ -37,6 +37,5 @@ _comp_options+=(globdots)
 # sourcing folders/scripts
 source $DOTS/zsh/program-conf/*.zsh
 
-export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
-[ -f "/Users/tristanlukens/.ghcup/env" ] && source "/Users/tristanlukens/.ghcup/env"
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"

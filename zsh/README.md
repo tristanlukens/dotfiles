@@ -11,11 +11,8 @@ My configuration is very simple: it's some aliases and fixes, with a prompt and 
 
 ## Todo
 
-- [ ] edit the colour of the "in" text of the prompt
 - [ ] add git support to the prompt
 - [ ] get a better way of calling compinit, I don't think it's perfect
-- [ ] do some research on zinit: will installation and sourcing code ever break (updates?)?
 - [ ] move to zpm from zinit, I think it's a little better
 - [ ] properly fix the cursor style, setting keytimeout=1 is kind of a hack and apperantly not recommended
-- [ ] make autostart script better
 - [ ] use `brew --prefix` instead of needing to edit a variable
