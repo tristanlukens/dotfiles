@@ -41,7 +41,7 @@ brew install fortune
 brew install cowsay
 brew install jq
 brew install lua
-brew install go --HEAD  # Brew is really slow with updating go, so I'm using HEAD.
+brew install go
 brew install rbenv
 brew install rust
 brew install node
@@ -93,7 +93,7 @@ read -p "" && echo "Pressed enter; continuing"
 # -- NPM --
 # verifying that node is installed correctly
 if ! type "node" >> /dev/null; then
-  echo "Node is not installed correctly: it's not installed, or not in $PATH; exited with code 1"
+  echo "Node is not installed correctly: it's not installed, or not in \$PATH; exited with code 1"
   exit 1
 fi
 
@@ -111,7 +111,7 @@ read -p "" && echo "Pressed enter; continuing"
 export SDKROOT=$(xcrun --show-sdk-path)
 
 # setting up rbenv
-source $DOTS/setup-scripts/rbenv.bash
+source $DOTS/zsh/program-conf/rbenv.bash
 
 # verifying that rbenv is installed correctly
 if ! type "rbenv"; then
@@ -120,8 +120,8 @@ if ! type "rbenv"; then
 fi
 
 # change these if there's a newer version!
-rbenv install 3.1.1
-rbenv global 3.1.1
+rbenv install 3.1.2
+rbenv global 3.1.2
 
 # packages
 gem install --user-install jekyll
