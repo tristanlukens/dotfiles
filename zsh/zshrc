@@ -15,7 +15,6 @@ OS=$(uname -s)
 
 source $DOTS/zsh/aliases.zsh
 source $DOTS/zsh/prompt.zsh
-# source $DOTS/zsh/autostart.zsh # too slow
 source $DOTS/zsh/completion.zsh
 source $DOTS/zsh/history.zsh
 
@@ -26,3 +25,8 @@ source $DOTS/program-conf/bat.zsh
 source $DOTS/program-conf/fzf.zsh
 
 source $DOTS/setup-scripts/rbenv.bash
+
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
+
+[ -f "/Users/tristanlukens/.ghcup/env" ] && source "/Users/tristanlukens/.ghcup/env" # ghcup-env
