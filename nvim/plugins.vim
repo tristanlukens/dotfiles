@@ -18,17 +18,14 @@ call plug#begin()
   Plug 'ayu-theme/ayu-vim'
   Plug 'scrooloose/nerdtree'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
   Plug 'kevinoid/vim-jsonc'
-  Plug 'codechips/coc-svelte', {'do': 'npm install'} 
   Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 call plug#end()
 
 " -- SOURCING CONFIG FILES --
-source $DOTS/nvim/plugins/coc.vim
 source $DOTS/nvim/plugins/nerdtree.vim
 source $DOTS/nvim/plugins/treesitter.vim
 source $DOTS/nvim/plugins/vim-go.vim

@@ -7,8 +7,8 @@
 
 " nvim theme config by Tristan Lukens
 " tristanlukens.github.io
-" -- AYU SETTINGS --
 
+" -- AYU SETTINGS --
 let ayucolor="dark"
 
 " -- COLORS --
