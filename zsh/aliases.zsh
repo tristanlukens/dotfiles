@@ -16,6 +16,14 @@ alias showpath="print -l $path | bat"
 
 alias solitaire="ttysolitaire --no-background-color -p 10"
 
+dlmp3() {
+  if [[ $# -eq 0 ]]; then
+      echo "No input url specified; exited"
+  else
+      yt-dlp -x --audio-format mp3 $1
+  fi
+}
+
 ct() {
   cd $1 && t
 }
