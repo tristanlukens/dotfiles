@@ -77,7 +77,8 @@ brew tap homebrew/cask-fonts
 
 brew install --cask font-lilex
 brew install --cask font-roboto-mono
-brew install --cask fira-code
+brew install --cask font-fira-code
+brew install --cask font-share-tech-mono
 brew install --cask font-roboto
 brew install --cask font-roboto-slab
 brew install --cask font-inter
