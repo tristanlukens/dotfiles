@@ -12,7 +12,6 @@
 " per-plugin is done in the $DOTS/nvim/plugins/ directory, but these will be
 " sourced here
 
-" coc-svelte dependencies are more up-to-date than when installing it via CocInstall or g:coc_global_extensions
 call plug#begin()
   Plug 'morhetz/gruvbox'
   Plug 'ayu-theme/ayu-vim'
