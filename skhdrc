@@ -1,0 +1,45 @@
+#      _    _         _
+#  ___| | _| |__   __| |
+# / __| |/ / '_ \ / _` |
+# \__ \   <| | | | (_| |
+# |___/_|\_\_| |_|\__,_|
+# 
+
+# skhd bindings by Tristan Lukens
+# https://tristanlukens.github.io
+
+# == YABAI ==
+
+# focus window
+hyper - h : yabai -m window --focus west
+hyper - j : yabai -m window --focus south
+hyper - k : yabai -m window --focus north
+hyper - l : yabai -m window --focus east
+
+# swap managed window
+hyper - y : yabai -m window --swap west
+hyper - u : yabai -m window --swap south
+hyper - i : yabai -m window --swap north
+hyper - o : yabai -m window --swap east
+
+# balance size of windows
+hyper - 0 : yabai -m space --balance
+
+# resize windows
+hyper - q : yabai -m window --resize left:-20:0
+hyper - w : yabai -m window --resize left:20:0
+hyper - a : yabai -m window --resize top:0:-20
+hyper - s : yabai -m window --resize top:0:20
+
+# toggle window zoom
+hyper - f : yabai -m window --toggle zoom-fullscreen
+
+# toggle window split type
+hyper - e : yabai -m window --toggle split
+
+# float / unfloat window and center on screen
+hyper - t : yabai -m window --toggle float;\
+            yabai -m window --grid 4:4:1:1:2:2
+
+# rotate
+hyper - r : yabai -m space --rotate 90
