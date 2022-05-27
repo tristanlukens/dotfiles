@@ -19,7 +19,10 @@ My dotfiles.
 - tmux
 - yabai
 - skhd
+- karabiner
 - setup scripts
+
+Although I have a yabai, karabiner and skhd setup, I'm using Amethyst for now.
 
 There's individual READMEs everything but git. Everything has its own folder.
 
