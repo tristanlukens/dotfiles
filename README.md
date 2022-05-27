@@ -22,8 +22,6 @@ My dotfiles.
 - karabiner
 - setup scripts
 
-Although I have a yabai, karabiner and skhd setup, I'm using Amethyst for now.
-
 There's individual READMEs everything but git. Everything has its own folder.
 
 I sync my Visual Studio Code settings with the the built-in feature. I tried to only use nvim, but it's just too big of a step. Besides that, I think CoC is just a tad too slow. If that wasn't enough to use Visual Studio Code, coc-tailwindcss doesn't work at the moment. Visual Code is just really good.
