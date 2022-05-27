@@ -21,7 +21,7 @@ My dotfiles.
 - skhd
 - setup scripts
 
-There's individual READMEs everything but git, yabai and skhd. git has its own folder, the other two don't (because I'm too lazy to fix it now).
+There's individual READMEs everything but git. Everything has its own folder.
 
 I sync my Visual Studio Code settings with the the built-in feature. I tried to only use nvim, but it's just too big of a step. Besides that, I think CoC is just a tad too slow. If that wasn't enough to use Visual Studio Code, coc-tailwindcss doesn't work at the moment. Visual Code is just really good.
 
