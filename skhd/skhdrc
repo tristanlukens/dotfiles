@@ -25,21 +25,32 @@ hyper - o : yabai -m window --swap east
 # balance size of windows
 hyper - 0 : yabai -m space --balance
 
+# focus on spaces 1 to 5
+# https://github.com/koekeishiya/yabai/issues/205
+hyper - 1 : index=1; eval "$(yabai -m query --spaces | jq --argjson index "${index}" -r '(.[] | select(.index == $index).windows[0]) as $wid | if $wid then "yabai -m window --focus \"" + ($wid | tostring) + "\"" else "skhd --key \"ctrl - " + (map(select(."is-native-fullscreen" == false)) | index(map(select(.index == $index))) + 1 % 10 | tostring) + "\"" end')"
+hyper - 2 : index=2; eval "$(yabai -m query --spaces | jq --argjson index "${index}" -r '(.[] | select(.index == $index).windows[0]) as $wid | if $wid then "yabai -m window --focus \"" + ($wid | tostring) + "\"" else "skhd --key \"ctrl - " + (map(select(."is-native-fullscreen" == false)) | index(map(select(.index == $index))) + 1 % 10 | tostring) + "\"" end')"
+hyper - 3 : index=3; eval "$(yabai -m query --spaces | jq --argjson index "${index}" -r '(.[] | select(.index == $index).windows[0]) as $wid | if $wid then "yabai -m window --focus \"" + ($wid | tostring) + "\"" else "skhd --key \"ctrl - " + (map(select(."is-native-fullscreen" == false)) | index(map(select(.index == $index))) + 1 % 10 | tostring) + "\"" end')"
+hyper - 4 : index=4; eval "$(yabai -m query --spaces | jq --argjson index "${index}" -r '(.[] | select(.index == $index).windows[0]) as $wid | if $wid then "yabai -m window --focus \"" + ($wid | tostring) + "\"" else "skhd --key \"ctrl - " + (map(select(."is-native-fullscreen" == false)) | index(map(select(.index == $index))) + 1 % 10 | tostring) + "\"" end')"
+hyper - 5 : index=5; eval "$(yabai -m query --spaces | jq --argjson index "${index}" -r '(.[] | select(.index == $index).windows[0]) as $wid | if $wid then "yabai -m window --focus \"" + ($wid | tostring) + "\"" else "skhd --key \"ctrl - " + (map(select(."is-native-fullscreen" == false)) | index(map(select(.index == $index))) + 1 % 10 | tostring) + "\"" end')"
+
+# float / unfloat window and center on screen
+hyper - t : yabai -m window --toggle float;\
+            yabai -m window --grid 4:4:1:1:2:2
+
 # resize windows
-hyper - q : yabai -m window --resize left:-20:0
-hyper - w : yabai -m window --resize left:20:0
+hyper - q : yabai -m window --resize right:-20:0
+hyper - w : yabai -m window --resize right:20:0
 hyper - a : yabai -m window --resize top:0:-20
 hyper - s : yabai -m window --resize top:0:20
+
+# move floated window
+hyper - v : yabai -m window --move rel:-20:0
+hyper - b : yabai -m window --move rel:0:20
+hyper - n : yabai -m window --move rel:0:-20
+hyper - m : yabai -m window --move rel:20:0
 
 # toggle window zoom
 hyper - f : yabai -m window --toggle zoom-fullscreen
 
 # toggle window split type
 hyper - e : yabai -m window --toggle split
-
-# float / unfloat window and center on screen
-hyper - t : yabai -m window --toggle float;\
-            yabai -m window --grid 4:4:1:1:2:2
-
-# rotate
-hyper - r : yabai -m space --rotate 90
