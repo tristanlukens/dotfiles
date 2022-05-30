@@ -10,6 +10,8 @@ require'nvim-tree'.setup {
 				file = false,
 			},
 			glyphs = {
+				default = "",
+				symlink = "->",
 				folder =  {
 					arrow_closed = "",
           arrow_open = "",
