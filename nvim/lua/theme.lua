@@ -1,10 +1,10 @@
 -- ayu
 vim.opt.termguicolors = true
 vim.cmd("let ayucolor = 'light'")
---vim.cmd('colorscheme ayu')
+vim.cmd('colorscheme ayu')
 
 -- gruvbox
-vim.cmd('colorscheme gruvbox')
+--vim.cmd('colorscheme gruvbox')
  
 -- gruvbox8
 vim.opt.background = 'dark'
