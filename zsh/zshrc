@@ -36,6 +36,7 @@ alias t="tree -Cax"
 alias tr="tree -CaI .git -I node_modules"
 alias showpath="print -l $path | bat"
 alias solitaire="ttysolitaire --no-background-color -p 10"
+alias lvim="$HOME/.local/bin/lvim"
 
 dlmp3() {
   if [[ $# -eq 0 ]]; then
@@ -155,3 +156,7 @@ export PATH="$HOME/.gem/ruby/3.1.2/bin:$PATH" # should be updated with new versi
 
 # rustup
 . "$HOME/.cargo/env"
+
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
