@@ -1,5 +1,13 @@
 # nvim
 
-This is my nvim setup as my day-to-day text editor. It has IDE features, but no completion and language servers. That's for nvim-ide to take care of.
+My neovim config.
 
-The plans for the future are to set up nvim as an ide, and always use it. I couldn't get completion to work though, so it's not a good alternative for vscode, which is what I'm using right now.
+I'm using coc.
+
+## Todo
+
+- set up ruby (besides installing language server)
+- set up lua (besides installing language server)
+- set up a proper testing env for a whole lot of languages
+- convert everything to lua
+- seperate config into multiple files
