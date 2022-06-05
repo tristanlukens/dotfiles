@@ -22,9 +22,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " others
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'BurntSushi/ripgrep'
 
 call plug#end()
 
@@ -110,10 +112,13 @@ set scl=yes
 " keybinds
 let mapleader=" "
 nnoremap <silent> <Leader>w :write<CR>
+
 noremap <silent> <C-k> :noh<CR>
 
 nnoremap <silent> <Leader>` :NvimTreeToggle<CR>
-nnoremap <silent> <C-p> :FZF<CR>
+
+nnoremap <silent> <C-p> <cmd>Telescope find_files<cr>
+nnoremap <silent> <Leader><C-p> <cmd>Telescope live_grep<cr>
 
 " coc
 let g:coc_global_extensions = [
