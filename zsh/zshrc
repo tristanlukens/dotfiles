@@ -28,6 +28,10 @@ fi
 
 
 
+## -- MANDATORY FIXES -- ##
+# tmux doesn't work without this
+export TERM=screen-256color
+
 ## -- ALIASES AND FUNCTIONS -- ##
 
 alias reload="source $DOTS/zsh/zshrc"
