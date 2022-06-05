@@ -45,11 +45,11 @@ require'nvim-tree'.setup {
 				default = "",
 				symlink = "->",
 				folder =  {
-					arrow_closed = "",
-          arrow_open = "",
-          default = "d",
-          open = "o",
-          empty = "e",
+					arrow_closed = ">",
+          arrow_open = "v",
+          default = "",
+          open = "",
+          empty = "",
           empty_open = "o",
           symlink = "s",
           symlink_open = "so",
@@ -79,9 +79,9 @@ EOF
 
 " theme
 set termguicolors
-let ayucolor="dark"
+let ayucolor="light"
 
-colorscheme gruvbox
+colorscheme ayu
 
 " statusline
 lua << EOF
