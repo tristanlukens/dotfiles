@@ -27,10 +27,10 @@ if [[ $OS = "Darwin" ]]; then
 fi
 
 
-
 ## -- MANDATORY FIXES -- ##
+
 # tmux doesn't work without this
-export TERM=screen-256color
+export TERM=xterm-256color
 
 ## -- ALIASES AND FUNCTIONS -- ##
 
