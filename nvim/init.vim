@@ -81,7 +81,7 @@ EOF
 
 " theme
 set termguicolors
-let ayucolor="light"
+let ayucolor="dark"
 
 colorscheme ayu
 
