@@ -8,29 +8,7 @@
 # zshrc by Tristan Lukens
 # tristanlukens.github.io
 
-export DOTS="$HOME/dotfiles"    # change if dotfiles are installed somewhere else
-OS=$(uname -s)
-
-## -- macOS-SPECIFICS -- ##
-
-if [[ $OS = "Darwin" ]]; then
-  # this should be refactored to be $(brew --prefix) but that takes a long time to load. besides, I'm writing
-  # this comment on the installation where I (somehow) have like three installations and also one in usr/local
-  # which shoudn't be possible on arm but well... When I run brew --prefix now, it spits back usr/local
-  export BREW_PREFIX="/opt/homebrew"
-  export PATH=$BREW_PREFIX/bin:$PATH
-  
-  export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
-  export PATH="/usr/local/opt/llvm/bin:$PATH"
-  
-  [[ $BREW_PREFIX == "/opt/homebrew" ]] && alias brew="arch -arm64 brew"
-fi
-
-
-## -- MANDATORY FIXES -- ##
-
-# tmux doesn't work without this
-export TERM=xterm-256color
+source "$HOME/dotfiles/scripts/utils/env.bash"
 
 ## -- ALIASES AND FUNCTIONS -- ##
 
@@ -43,16 +21,14 @@ alias solitaire="ttysolitaire --no-background-color -p 10"
 alias lvim="$HOME/.local/bin/lvim"
 
 dlmp3() {
-  if [[ $# -eq 0 ]]; then
+  [[ $# -eq 0 ]]; then
       echo "No input url specified; exited"
   else
       yt-dlp -x --audio-format mp3 $1
   fi
 }
 
-ct() {
-  cd $1 && t
-}
+ct() { cd $1 && t }
 
 vim() {
   if [[ $# -eq 0 ]]; then
@@ -80,52 +56,14 @@ ef() {
   fi
 }
 
-conf() {
-  local old=$(pwd)
-  cd $DOTS
-
-  ef
-
-  cd $old
-}
-
-
+conf() { local old=$(pwd) && cd $DOTS && ef && cd $old }
 
 ## -- PLUGINS -- ##
 
-# zinit installation
-if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
-  print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
-  command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
-  command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
-    print -P "%F{33} %F{34}Installation successful.%f%b" || \
-    print -P "%F{160} The clone has failed.%f%b"
-fi
-
-source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-
-# installing plugins
-zinit ice depth=1
-zinit light softmoth/zsh-vim-mode
+source $DOTS/zsh/plugins/zsh-vim-mode.zsh
 
 
 
-## -- PLUGIN CONFIG -- ##
-
-# zsh-vim-mode
-KEYTIMEOUT=1 # sue me. I dare you
-
-MODE_CURSOR_VIINS="#00ff00 bar"
-MODE_CURSOR_REPLACE="$MODE_CURSOR_VIINS #ff0000"
-MODE_CURSOR_VICMD="green block"
-MODE_CURSOR_SEARCH="#ff00ff steady underline"
-MODE_CURSOR_VISUAL="$MODE_CURSOR_VICMD steady bar"
-MODE_CURSOR_VLINE="$MODE_CURSOR_VISUAL #00ffff"
-
-
- 
 ## -- COMPLETION -- ##
 
 autoload -U compinit
