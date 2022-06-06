@@ -16,7 +16,6 @@ My dotfiles.
 - zsh
 - nvim
 - git
-- tmux
 - yabai
 - skhd
 - karabiner
