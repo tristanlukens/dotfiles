@@ -52,9 +52,9 @@ require'nvim-tree'.setup {
           default = "",
           open = "",
           empty = "",
-          empty_open = "o",
-          symlink = "s",
-          symlink_open = "so",
+          empty_open = "",
+          symlink = "",
+          symlink_open = "",
 				},
 				git = {
 					unmerged = "-",
@@ -112,6 +112,14 @@ set scl=yes
 " keybinds
 let mapleader=" "
 nnoremap <silent> <Leader>w :write<CR>
+
+if system('uname') =~ "Darwin"
+	noremap <silent> <Leader><C-c> "*y
+	noremap <silent> <Leader><C-v> "*p
+else
+	noremap <silent> <Leader><C-c> "+y
+	noremap <silent> <Leader><C-v> "+p
+endif
 
 noremap <silent> <C-k> :noh<CR>
 
