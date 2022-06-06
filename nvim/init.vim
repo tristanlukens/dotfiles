@@ -114,11 +114,9 @@ let mapleader=" "
 nnoremap <silent> <Leader>w :write<CR>
 
 if system('uname') =~ "Darwin"
-	noremap <silent> <Leader><C-c> "*y
-	noremap <silent> <Leader><C-v> "*p
+	noremap <silent> <Leader><C-v> "*y
 else
-	noremap <silent> <Leader><C-c> "+y
-	noremap <silent> <Leader><C-v> "+p
+	noremap <silent> <Leader><C-v> "+y
 endif
 
 noremap <silent> <C-k> :noh<CR>
