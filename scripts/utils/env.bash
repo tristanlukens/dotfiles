@@ -3,14 +3,14 @@ export DOTS=$HOME/dotfiles
 
 # things which require brew
 if [[ $(uname -s) = "Darwin" ]]; then
-  # this should be refactored to be $(brew --prefix) but that takes a long time to load. besides, I'm writing
-  # this comment on the installation where I (somehow) have like three installations and also one in usr/local
-  # which shoudn't be possible on arm but well... When I run brew --prefix now, it spits back usr/local
+	# this should be refactored to be $(brew --prefix) but that takes a long time to load. besides, I'm writing
+	# this comment on the installation where I (somehow) have like three installations and also one in usr/local
+	# which shoudn't be possible on arm but well... When I run brew --prefix now, it spits back usr/local
 	export BREW_PREFIX=/opt/homebrew
 
-  export PATH=$BREW_PREFIX/bin:$PATH
-  export PATH="$BREW_PREFIX/opt/node@16/bin:$PATH"
-  export PATH="$BREW_PREFIX/opt/llvm/bin:$PATH"
+	export PATH=$BREW_PREFIX/bin:$PATH
+	export PATH="$BREW_PREFIX/opt/node@16/bin:$PATH"
+	export PATH="$BREW_PREFIX/opt/llvm/bin:$PATH"
 
 	source $BREW_PREFIX/opt/chruby/share/chruby/chruby.sh
 	source $BREW_PREFIX/opt/chruby/share/chruby/auto.sh
