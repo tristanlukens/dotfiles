@@ -11,3 +11,4 @@ I'm using coc.
 - set up a proper testing env for a whole lot of languages
 - convert everything to lua
 - seperate config into multiple files
+- make python formatting work

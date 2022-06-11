@@ -1,0 +1,117 @@
+#  _                        __ _ _
+# | |__  _ __ _____      __/ _(_) | ___
+# | '_ \| '__/ _ \ \ /\ / / |_| | |/ _ \
+# | |_) | | |  __/\ V  V /|  _| | |  __/
+# |_.__/|_|  \___| \_/\_/ |_| |_|_|\___|
+#
+
+# brewfile by Tristan Lukens
+# https://tristanlukens.vercel.app
+
+# formulae
+brew "asciiquarium"
+brew "bash"
+brew "bat"
+brew "chruby"
+brew "cmake"
+brew "cmatrix"
+brew "cowsay"
+brew "deno"
+brew "docker"
+brew "elm"
+brew "ffmpeg"
+brew "figlet"
+brew "fortune"
+brew "fzf"
+brew "gh"
+brew "git"
+brew "glfw"
+brew "gnupg"
+brew "go"
+brew "htop"
+brew "imagemagick"
+brew "jq"
+brew "koekeishiya/formulae/skhd"
+brew "koekeishiya/formulae/yabai"
+brew "lolcat"
+brew "lua-langauge-server"
+brew "lua"
+brew "luarocks"
+brew "make"
+brew "mas"
+brew "ncurses"
+brew "neofetch"
+brew "neovim"
+brew "ninja"
+brew "node@16"
+brew "nsnake"
+brew "nudoku"
+brew "pandoc"
+brew "pipes-sh"
+brew "pnpm"
+brew "python"
+brew "ruby-install"
+brew "rust-analyzer"
+brew "sdl2"
+brew "speedtest-cli"
+brew "swift"
+brew "thefuck"
+brew "tmux"
+brew "tree-sitter"
+brew "tree"
+brew "tty-clock"
+brew "tty-solitaire"
+brew "yt-dlp"
+brew "zsh"
+
+# casks
+cask "amethyst"
+cask "balenaetcher"
+cask "blender"
+cask "boop"
+cask "brewlet"
+cask "coconutbattery"
+cask "cool-retro-term"
+cask "coteditor"
+cask "curseforge"
+cask "discord"
+cask "dyalog"
+cask "figma"
+cask "firefox"
+cask "github"
+cask "godot"
+cask "handbrake"
+cask "karabiner-elements"
+cask "keycastr"
+cask "minecraft"
+cask "processing"
+cask "rectangle"
+cask "spotify"
+cask "typora"
+cask "visual-studio-code"
+
+# fonts
+tap "hombrew/cask-fonts"
+
+cask "font-crimson-pro"
+cask "font-fira-code"
+cask "font-inter"
+cask "font-lilex"
+cask "font-lora"
+cask "font-roboto-mono"
+cask "font-roboto-slab"
+cask "font-roboto"
+cask "font-share-tech-mono"
+
+# app store apps
+mas 1496833156 # Playgrounds
+mas 1153157709 # speedtest
+mas 408981434 # iMovie
+mas 682658836 # GarageBand
+mas 497799835 # Xcode
+mas 409201541 # Pages
+mas 409183694 # Keynote
+mas 409203825 # Numbers
+mas 1147396723 # WhatsApp
+mas 1491326665 # Tempus
+mas 871033113 # 2048 Game

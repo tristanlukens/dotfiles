@@ -11,12 +11,9 @@
 
 # the "pointer" for iTerm's settings needs to be configured in its own Preferences menu
 
-[[ ! $DOTS ]] && DOTS=$HOME/dotfiles # $DOTS might exist already; it's declared in zshrc as well. This might not have been run however, when this script should be run
-
 ln -s $DOTS/git/gitconfig  $HOME/.gitconfig
 ln -s $DOTS/zsh/zshrc      $HOME/.zshrc
 ln -s $DOTS/nvim           $HOME/.config/nvim
 ln -s $DOTS/karabiner      $HOME/.config/karabiner
-ln -s $DOTS/tmux/tmux.conf $HOME/.tmux.conf
 ln -s $DOTS/yabai          $HOME/.config/yabai
 ln -s $DOTS/skhd           $HOME/.config/skhd

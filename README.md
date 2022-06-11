@@ -28,6 +28,9 @@ I sync my Visual Studio Code settings with the the built-in feature. I tried to 
 ## General Todos
 
 - [ ] create a script for moving themes to ayu. for everything. I like it better than gruvbox
+- [ ] make dotfiles location modular, probably using ${0:a:h}, but I can't get symlinks to be resolved at the time of writing
+- [ ] move to pnpm from npm; this would require configuring pnpm to be in .local/share instead of ~/Library in macOS
+- [ ] configure python
 
 ## Post-setup steps
 
