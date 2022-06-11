@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # IMPORTANT: THIS SCRIPT HAS NOT BEEN TESTED AT THE TIME OF WRITING
-# this is for macOS
 
 alias err="echo 'installation failed; exited with code 1'; exit 1"
 check() { [ ! type $1 >> /dev/null ] && err }
@@ -45,6 +44,8 @@ npm install -g vim-language-server
 npm install -g vue
 npm install -g yarn
 
+check coffeescript
+
 success
 
 # ---------------------------------------------------------------- #
@@ -67,13 +68,16 @@ gem install --user-install bundler
 gem install --user-install rufo
 gem install --user-install rubocop
 
+check bundle
+
+success
+
 # ---------------------------------------------------------------- #
 
 ## -- RUSTUP -- ##
 
 # from https://rustup.rs/
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
 
 check rust
 
@@ -83,3 +87,4 @@ check rust
 
 # from https://www.haskell.org/ghcup/
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+

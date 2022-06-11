@@ -57,6 +57,7 @@ brew "zsh"
 # casks
 cask "amethyst"
 cask "balenaetcher"
+brew "basictex"
 cask "blender"
 cask "boop"
 cask "brewlet"
