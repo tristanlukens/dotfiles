@@ -4,7 +4,14 @@
     "go",
     "typescript",
     "javascript",
-    "json"
+    "json",
+    "css",
+    "scss",
+    "sass",
+    "html",
+    "svelte",
+    "python"
   ],
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "svelte.enable-ts-plugin": true
 }
