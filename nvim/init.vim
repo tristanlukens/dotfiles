@@ -21,8 +21,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " others
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'editorconfig/editorconfig-vim'
+Plug 'airblade/vim-gitgutter'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -67,7 +68,7 @@ require'nvim-tree'.setup {
 
 -- treesitter
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "c", "lua", "rust", "javascript", "typescript", "svelte", "go", "css", "html", "markdown", "ruby", "yaml", "json", "make" },
+  ensure_installed = { "c", "lua", "rust", "javascript", "typescript", "svelte", "go", "css", "html", "markdown", "ruby", "yaml", "json", "make", "python" },
 
   sync_install = false,
 
@@ -81,7 +82,7 @@ EOF
 
 " theme
 set termguicolors
-let ayucolor="dark"
+let ayucolor="mirage"
 
 colorscheme ayu
 
@@ -132,15 +133,16 @@ let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-json',
   \ 'coc-emmet',
-  \ 'coc-tailwindcss',
+  \ '@yaegassy/coc-tailwindcss3',
   \ 'coc-eslint',
   \ 'coc-prettier',
 	\ 'coc-rust-analyzer',
-  \ 'coc-go',
+	\ 'coc-go',
 	\ 'coc-pairs',
 	\ 'coc-solargraph',
 	\ 'coc-vimlsp',
-	\ 'coc-lua'
+	\ 'coc-lua',
+	\ 'coc-pyright'
   \ ]
 
 " copied from coc's readme
