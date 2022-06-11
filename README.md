@@ -55,5 +55,6 @@ After you've set up your installation with `$DOTS/scripts/macOS-setup/setup.bash
 1. go into Safari's preferences and select Seperate tabs. Make the default search engine DuckDuckGo. Additionally, tick on Show full website address and Show Develop in menu bar
 1. make DDG the default search engine in all browsers
 1. go into Safari's preferences and select Seperate tabs. Additionally, tick on Show full website address and Show Develop in menu bar
+1. install the WhatFont and Vimium C extensions in Brave and Firefox
 
 The rest (things like logging into apps etc) should come to you while you're using the OS. These are the most important things.
