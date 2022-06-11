@@ -8,10 +8,12 @@
 # zshrc by Tristan Lukens
 # tristanlukens.github.io
 
-source "$HOME/dotfiles/scripts/utils/env.bash"
+# change if they're somewhere else. Also declared in env.bash, but I can't really do anything about that (see todo in main readme)
+export DOTS=$HOME/dotfiles
+
+# ---------------------------------------------------------------- #
 
 ## -- ALIASES AND FUNCTIONS -- ##
-
 alias reload="source $DOTS/zsh/zshrc"
 alias la="ls -la --color"
 alias t="tree -Cax"
@@ -19,86 +21,39 @@ alias tr="tree -CaI .git -I node_modules"
 alias showpath="print -l $path | bat"
 alias solitaire="ttysolitaire --no-background-color -p 10"
 alias lvim="$HOME/.local/bin/lvim"
+alias v="vim"
+alias python="python3"
 
-dlmp3() {
-  [[ $# -eq 0 ]]; then
-      echo "No input url specified; exited"
-  else
-      yt-dlp -x --audio-format mp3 $1
-  fi
-}
+alias err="echo 'No input url specified\; exited with code 1'; exit 1"
 
-ct() { cd $1 && t }
+dlmp3() { [[ $# -eq 0 ]] && err; yt-dlp -x --audio-format mp3 $1 }
+vim()   { [[ $# -eq 0 ]] && nvim . || nvim $1 }
+conf()  { cd $DOTS && ef && cd $OLDPWD }
+ef()    { local output=$(fzf); [[ -n $output ]] && vim $output || err }
+ct()    { cd $1 && t }
 
-vim() {
-  if [[ $# -eq 0 ]]; then
-      nvim .
-  else
-      nvim $1
-  fi
-}
-
-v() {
-  if [[ $# -eq 0 ]]; then
-      vim .
-  else
-      vim $1
-  fi
-}
-
-ef() {
-  local output=$(fzf)
-
-  if [[ -n $output ]]; then
-      vim $output
-  else
-      echo "No input file specified; exited"
-  fi
-}
-
-conf() { local old=$(pwd) && cd $DOTS && ef && cd $old }
+# ---------------------------------------------------------------- #
 
 ## -- PLUGINS -- ##
-
 source $DOTS/zsh/plugins/zsh-vim-mode.zsh
 
-
+# ---------------------------------------------------------------- #
 
 ## -- COMPLETION -- ##
-
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit -d ~/.cache/zsh/zcompdump-$zsh_version
 _comp_options+=(globdots)
 
-
+# ---------------------------------------------------------------- #
 
 ## -- OTHERS -- ##
-
-# prompt
 PROMPT="%B%K{cyan} %~ %k%b -> "
-
-# history
 HISTFILE=$HOME/.cache/zsh/history
 
+# ---------------------------------------------------------------- #
 
+## -- ENV SETUP -- ##
+source $DOTS/scripts/utils/env.bash
 
-## -- SOURCING THINGS -- ##
-
-# go bin
-export PATH="$HOME/go/bin:$PATH"
-
-# ghcup
-[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
-
-# rbenv
-eval "$(rbenv init - zsh)"
-export PATH="$HOME/.gem/ruby/3.1.2/bin:$PATH" # should be updated with new versions
-
-# rustup
-. "$HOME/.cargo/env"
-
-# pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
