@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
 # IMPORTANT: THIS SCRIPT HAS NOT BEEN TESTED AT THE TIME OF WRITING
+# this is for macOS
 
 alias err="echo 'installation failed; exited with code 1'; exit 1"
 check() { [ ! type $1 >> /dev/null ] && err }
 success() { check $1 && echo "$1 was installed successfully. Press enter to continue"; read -p "" && echo "Pressed enter; continuing" }
 
-# -- BREW --
+## -- BREW -- ##
 # installation
 xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -66,5 +67,19 @@ gem install --user-install bundler
 gem install --user-install rufo
 gem install --user-install rubocop
 
-# -- RUSTUP -- #
+# ---------------------------------------------------------------- #
+
+## -- RUSTUP -- ##
+
+# from https://rustup.rs/
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+
+check rust
+
+# ---------------------------------------------------------------- #
+
+## -- HASKELL -- ##
+
+# from https://www.haskell.org/ghcup/
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
