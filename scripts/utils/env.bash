@@ -18,6 +18,8 @@ else
 	# TODO: set up for linux
 fi
 
+## -- CROSS-PLATFORM THINGS -- ##
+
 # go bin
 export PATH="$HOME/go/bin:$PATH"
 

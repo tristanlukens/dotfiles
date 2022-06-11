@@ -1,14 +1,15 @@
 #          _
-#  _______| |__  _ __ ___
-# |_  / __| '_ \| '__/ __|
-#  / /\__ \ | | | | | (__
-# /___|___/_| |_|_|  \___|
+#  _______| |__
+# |_  / __| '_ \
+#  / /\__ \ | | |
+# /___|___/_| |_|
 #
 
 # zshrc by Tristan Lukens
-# tristanlukens.github.io
+# https://tristanlukens.github.io
 
-# change if they're somewhere else. Also declared in env.bash, but I can't really do anything about that (see todo in main readme)
+# change if they're somewhere else
+# also declared in env.bash, but I can't really do anything about that (see todo in main readme)
 export DOTS=$HOME/dotfiles
 
 # ---------------------------------------------------------------- #

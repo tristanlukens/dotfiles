@@ -6,8 +6,8 @@
 #                    |_|
 #
 
-# setup script by Tristan Lukens
-# tristanlukens.github.io
+# setup bash script by Tristan Lukens
+# https://tristanlukens.github.io
 
 #!/usr/bin/env bash
 

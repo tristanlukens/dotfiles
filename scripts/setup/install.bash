@@ -1,12 +1,3 @@
-#  _           _        _ _
-# (_)_ __  ___| |_ __ _| | |
-# | | '_ \/ __| __/ _` | | |
-# | | | | \__ \ || (_| | | |
-# |_|_| |_|___/\__\__,_|_|_|
-
-# install setup script by Tristan Lukens
-# tristanlukens.github.io
-
 #!/usr/bin/env bash
 
 # IMPORTANT: THIS SCRIPT HAS NOT BEEN TESTED AT THE TIME OF WRITING

@@ -19,13 +19,15 @@ My dotfiles.
 - yabai
 - skhd
 - karabiner
-- setup scripts
+- various bash scripts
 
 There's individual READMEs everything but git. Everything has its own folder.
 
-I sync my Visual Studio Code settings with the the built-in feature. I tried to only use nvim, but it's just too big of a step. Besides that, I think CoC is just a tad too slow. If that wasn't enough to use Visual Studio Code, coc-tailwindcss doesn't work at the moment. Visual Code is just really good.
+I sync my Visual Studio Code settings with the the built-in feature, but I really only use nvim anymore 😎.
 
 ## General Todos
+
+There's individual todos sections in the seperate READMEs.
 
 - [ ] create a script for moving themes to ayu. for everything. I like it better than gruvbox
 - [ ] make dotfiles location modular, probably using ${0:a:h}, but I can't get symlinks to be resolved at the time of writing
@@ -35,6 +37,8 @@ I sync my Visual Studio Code settings with the the built-in feature. I tried to 
 ## Post-setup steps
 
 After you've set up your installation with `$DOTS/setup-scripts/setup.bash`, you should do the following to be done with the setup of your system.
+
+> this is outdated (at the time of writing)
 
 ### macOS
 

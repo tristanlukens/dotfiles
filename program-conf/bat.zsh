@@ -5,6 +5,9 @@
 # |_.__/ \__,_|\__|
 
 # bat config by Tristan Lukens
-# tristanlukens.github.io
+# https://tristanlukens.github.io
 
-export BAT_THEME="gruvbox-dark"
+# nord looks OK with ayu (my main theme), but there's also a gruvbox theme
+export BAT_THEME="Nord"
+
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"

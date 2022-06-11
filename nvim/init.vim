@@ -6,7 +6,7 @@
 " 
 " 
 " nvim config by Tristan Lukens
-" https://tristanlukens.vercel.app
+" https://tristanlukens.github.io
 
 " plugins
 call plug#begin('~/.local/share/nvim/plugged')

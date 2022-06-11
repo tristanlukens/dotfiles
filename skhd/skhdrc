@@ -8,7 +8,7 @@
 # skhd bindings by Tristan Lukens
 # https://tristanlukens.github.io
 
-# == YABAI ==
+## -- YABAI -- ##
 
 # focus window
 hyper - h : yabai -m window --focus west
