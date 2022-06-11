@@ -21,20 +21,20 @@ fi
 ## -- CROSS-PLATFORM THINGS -- ##
 
 # go bin
-export PATH="$HOME/go/bin:$PATH"
+[ -d $HOME/go/bin ] && export PATH="$HOME/go/bin:$PATH"
 
 # ghcup
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
 
 # chruby
-chruby ruby
+type chruby > /dev/null && chruby ruby
 
 # rustup
-. "$HOME/.cargo/env"
+[ -f $HOME/.cargo/env ] && . "$HOME/.cargo/env"
 
 # python
 # TODO
 
 # other
-source $DOTS/program-conf/bat.zsh
-source $DOTS/program-conf/fzf.zsh
+[ -f $DOTS/program-conf/bat.zsh ] && source $DOTS/program-conf/bat.zsh
+[ -f $DOTS/program-conf/fzf.zsh ] && source $DOTS/program-conf/fzf.zsh
