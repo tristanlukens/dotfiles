@@ -8,30 +8,34 @@
 # zshrc by Tristan Lukens
 # https://tristanlukens.github.io
 
-# change if they're somewhere else
-# also declared in env.bash, but I can't really do anything about that (see todo in main readme)
 export DOTS=$HOME/dotfiles
 
 # ---------------------------------------------------------------- #
 
 ## -- ALIASES AND FUNCTIONS -- ##
-alias reload="source $DOTS/zsh/zshrc"
 alias la="ls -la --color"
 alias t="tree -Cax"
 alias tr="tree -CaI .git -I node_modules"
 alias showpath="print -l $path | bat"
-alias solitaire="ttysolitaire --no-background-color -p 10"
+alias reload="source $DOTS/zsh/zshrc"
+alias installed="brew list | grep"
+alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
+
 alias lvim="$HOME/.local/bin/lvim"
+alias solitaire="ttysolitaire --no-background-color -p 10"
+alias dlmp3="yt-dlp -x --audio-format mp3"
 alias v="vim"
+
 alias python="python3"
+alias pip="pip3"
 
-alias err="echo 'No input url specified\; exited with code 1'; exit 1"
+# this should be done differently; I don't want to have these in the shell
+alias err="echo 'No input specified; aborting'"
+alias ignore="echo 'Arguments superfluous; ignoring any specified\n'"
 
-dlmp3() { [[ $# -eq 0 ]] && err; yt-dlp -x --audio-format mp3 $1 }
-vim()   { [[ $# -eq 0 ]] && nvim . || nvim $1 }
-conf()  { cd $DOTS && ef && cd $OLDPWD }
-ef()    { local output=$(fzf); [[ -n $output ]] && vim $output || err }
-ct()    { cd $1 && t }
+vim()  { [[ $# -eq 0 ]] && nvim . || nvim $1 }
+ef()   { [[ $# -gt 0 ]] && ignore; local output=$(fzf); [[ -n $output ]] && v $output || err }
+conf() { cd $DOTS && ef && cd $OLDPWD }
 
 # ---------------------------------------------------------------- #
 
@@ -50,11 +54,10 @@ _comp_options+=(globdots)
 # ---------------------------------------------------------------- #
 
 ## -- OTHERS -- ##
-PROMPT="%B%K{cyan} %~ %k%b -> "
+PROMPT="on %F{yellow}%M%f in %F{cyan}%~%f $ "
 HISTFILE=$HOME/.cache/zsh/history
 
 # ---------------------------------------------------------------- #
 
-## -- ENV SETUP -- ##
+## -- ENV -- ##
 source $DOTS/scripts/utils/env.bash
-

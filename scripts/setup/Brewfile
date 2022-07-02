@@ -94,6 +94,7 @@ cask "font-roboto-mono"
 cask "font-roboto-slab"
 cask "font-roboto"
 cask "font-share-tech-mono"
+cask "font-shure-tech-mono-nerd-font"
 
 # app store apps
 mas 1496833156 # Playgrounds

@@ -8,22 +8,22 @@
 // https://tristanlukens.github.io
 
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "rust",
-    "go",
-    "typescript",
-    "javascript",
-    "json",
-    "css",
-    "scss",
-    "sass",
-    "html",
-    "svelte",
-    "python",
-    "markdown"
-  ],
-  "eslint.autoFixOnSave": true,
-  "svelte.enable-ts-plugin": true,
-  // temp. I really need to set up a new installation
-  "python.formatting.autopep8Path": "/opt/homebrew/bin/autopep8"
+	"coc.preferences.formatOnSaveFiletypes": [
+		"rust",
+		"go",
+		"typescript",
+		"javascript",
+		"json",
+		"css",
+		"scss",
+		"sass",
+		"html",
+		"svelte",
+		"python",
+		"markdown"
+	],
+	"eslint.autoFixOnSave": true,
+	"svelte.enable-ts-plugin": true,
+	// temp. I really need to set up a new installation
+	"python.formatting.autopep8Path": "/opt/homebrew/bin/autopep8"
 }

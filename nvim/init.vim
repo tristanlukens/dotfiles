@@ -84,7 +84,7 @@ EOF
 set termguicolors
 let ayucolor="mirage"
 
-colorscheme ayu
+colorscheme gruvbox
 
 " statusline
 lua << EOF

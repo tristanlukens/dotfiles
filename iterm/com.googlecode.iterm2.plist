@@ -72023,7 +72023,7 @@
 		</dict>
 	</dict>
 	<key>Default Bookmark Guid</key>
-	<string>F7EA15B2-DD92-46C5-9FDC-8ADB2ED48250</string>
+	<string>D2B2DE70-8B68-40A1-8E30-28875F598CD2</string>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -72223,6 +72223,10 @@ Resize Split Pane.Move Divider Right</string>
 	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
+	<key>NeverWarnAboutShortLivedSessions_F7EA15B2-DD92-46C5-9FDC-8ADB2ED48250</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_F7EA15B2-DD92-46C5-9FDC-8ADB2ED48250_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -73134,7 +73138,7 @@ Resize Split Pane.Move Divider Right</string>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>No</string>
+			<string>Recycle</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -73478,7 +73482,7 @@ Resize Split Pane.Move Divider Right</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>ShareTechMono-Regular 15</string>
+			<string>ShureTechMonoNerdFontComplete-Regular 15</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -73868,7 +73872,7 @@ Resize Split Pane.Move Divider Right</string>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>No</string>
+			<string>Recycle</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -74212,7 +74216,7 @@ Resize Split Pane.Move Divider Right</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>ShareTechMono-Regular 15</string>
+			<string>ShureTechMonoNerdFontComplete-Regular 15</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -74293,6 +74297,18 @@ Resize Split Pane.Move Divider Right</string>
 			<true/>
 			<key>ASCII Ligatures</key>
 			<true/>
+			<key>AWDS Pane Directory</key>
+			<string></string>
+			<key>AWDS Pane Option</key>
+			<string>No</string>
+			<key>AWDS Tab Directory</key>
+			<string></string>
+			<key>AWDS Tab Option</key>
+			<string>No</string>
+			<key>AWDS Window Directory</key>
+			<string></string>
+			<key>AWDS Window Option</key>
+			<string>No</string>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -74604,7 +74620,7 @@ Resize Split Pane.Move Divider Right</string>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>No</string>
+			<string>Recycle</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -74948,7 +74964,7 @@ Resize Split Pane.Move Divider Right</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>ShareTechMono-Regular 15</string>
+			<string>ShureTechMonoNerdFontComplete-Regular 15</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -75029,6 +75045,18 @@ Resize Split Pane.Move Divider Right</string>
 			<true/>
 			<key>ASCII Ligatures</key>
 			<true/>
+			<key>AWDS Pane Directory</key>
+			<string></string>
+			<key>AWDS Pane Option</key>
+			<string>No</string>
+			<key>AWDS Tab Directory</key>
+			<string></string>
+			<key>AWDS Tab Option</key>
+			<string>No</string>
+			<key>AWDS Window Directory</key>
+			<string></string>
+			<key>AWDS Window Option</key>
+			<string>No</string>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -75340,7 +75368,7 @@ Resize Split Pane.Move Divider Right</string>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>No</string>
+			<string>Recycle</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -75684,7 +75712,7 @@ Resize Split Pane.Move Divider Right</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>ShareTechMono-Regular 15</string>
+			<string>ShureTechMonoNerdFontComplete-Regular 15</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>

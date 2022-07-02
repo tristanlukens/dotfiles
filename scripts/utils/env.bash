@@ -9,8 +9,8 @@ if [[ $(uname -s) = "Darwin" ]]; then
 	export BREW_PREFIX=/opt/homebrew
 
 	export PATH=$BREW_PREFIX/bin:$PATH
-	export PATH="$BREW_PREFIX/opt/node@16/bin:$PATH"
-	export PATH="$BREW_PREFIX/opt/llvm/bin:$PATH"
+	export PATH=$BREW_PREFIX/opt/node@16/bin:$PATH
+	export PATH=$BREW_PREFIX/opt/llvm/bin:$PATH
 
 	source $BREW_PREFIX/opt/chruby/share/chruby/chruby.sh
 	source $BREW_PREFIX/opt/chruby/share/chruby/auto.sh
