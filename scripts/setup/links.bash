@@ -2,7 +2,7 @@
 
 # the "pointer" for iTerm's settings needs to be configured in its own Preferences menu
 
-DOTS=$HOME/dots
+DOTS=$HOME/dotfiles
 
 ln -s $DOTS/git/gitconfig $HOME/.gitconfig
 ln -s $DOTS/zsh/zshrc     $HOME/.zshrc
