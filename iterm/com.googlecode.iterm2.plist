@@ -75826,6 +75826,8 @@ Resize Split Pane.Move Divider Right</string>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
+	<key>ShortLivedSessionDuration</key>
+	<real>0.0</real>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
