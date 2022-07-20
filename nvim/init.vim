@@ -85,7 +85,7 @@ EOF
 set termguicolors
 let ayucolor="dark"
 
-colorscheme nord
+colorscheme ayu
 
 " statusline
 lua << EOF
