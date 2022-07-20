@@ -15,6 +15,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'ayu-theme/ayu-vim'
+Plug 'arcticicestudio/nord-vim'
 
 " ide features
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -82,9 +83,9 @@ EOF
 
 " theme
 set termguicolors
-let ayucolor="mirage"
+let ayucolor="dark"
 
-colorscheme ayu
+colorscheme nord
 
 " statusline
 lua << EOF
