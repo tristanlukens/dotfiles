@@ -25,6 +25,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'wesQ3/vim-windowswap'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
